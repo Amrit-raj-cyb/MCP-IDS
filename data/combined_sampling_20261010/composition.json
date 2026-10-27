@@ -1,0 +1,37 @@
+{
+  "composed_at": "2026-10-09T22:02:54+00:00",
+  "sources": [
+    {
+      "path": "/lab/data/combined_expanded_20261006",
+      "dataset_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_sessions": 1354,
+      "labels": {
+        "attack": 360,
+        "benign": 994
+      },
+      "attack_families": {
+        "poisoned_tool": 120,
+        "sampling_injection": 120,
+        "shadowing": 120
+      },
+      "lab_versions": {
+        "0.9.0": 1354
+      }
+    },
+    {
+      "path": "/lab/data/benign_sampling_091",
+      "dataset_sha256": "06370ebfd8e8b433cb53ca2a8567f2b181dbb96adf471bd63ae43422a63c7367",
+      "n_sessions": 232,
+      "labels": {
+        "benign": 232
+      },
+      "attack_families": {},
+      "lab_versions": {
+        "0.9.1": 232
+      }
+    }
+  ],
+  "n_sessions": 1586,
+  "dataset_sha256": "74a73e6f87f1ceaecf79d2757b4ec43387ef1f88144d672a1a43d730cb6afbad",
+  "verify_problems": []
+}

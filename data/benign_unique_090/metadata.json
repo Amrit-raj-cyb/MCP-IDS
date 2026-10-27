@@ -1,0 +1,64 @@
+{
+  "dataset_sha256": "bff575f9316f40bf8afaba8423187783b4d445c1e86df59d82dfddabfe35fc3e",
+  "dataset_tag": "benign_unique",
+  "description_variants": {
+    "0": 634
+  },
+  "distinct_plans_per_task": {
+    "calc_add": 2,
+    "calc_temperature": 4,
+    "calc_unit_report": 16,
+    "db_add_log": 4,
+    "db_country_counts": 12,
+    "db_error_logs": 9,
+    "db_low_stock": 16,
+    "db_new_order": 4,
+    "db_order_status": 4,
+    "db_recent_orders": 12,
+    "db_top_products": 8,
+    "db_user_lookup": 8,
+    "fs_copy_notes": 12,
+    "fs_explore_documents": 4,
+    "fs_find_data_files": 8,
+    "fs_json_summary": 16,
+    "fs_report_digest": 24,
+    "fs_sampling_probe": 1,
+    "fs_search_reports": 48,
+    "fs_shadowing_probe": 1,
+    "fs_summarize_notes": 4,
+    "fs_write_todo": 27,
+    "multi_db_report": 2,
+    "multi_db_to_csv": 8,
+    "multi_news_growth": 4,
+    "multi_news_to_file": 2,
+    "multi_notes_to_log": 4,
+    "multi_order_share": 2,
+    "multi_price_check": 1,
+    "multi_region_share": 2,
+    "multi_web_db_prices": 3,
+    "web_about_team": 6,
+    "web_api_docs": 4,
+    "web_docs_tour": 16,
+    "web_faq_long": 6,
+    "web_getting_started": 3,
+    "web_news": 2,
+    "web_products_list": 8
+  },
+  "lab_versions": {
+    "0.9.0": 634
+  },
+  "labels": {
+    "benign": 634
+  },
+  "n_ok": 634,
+  "n_scenarios": 76,
+  "n_sessions": 634,
+  "n_tasks": 38,
+  "servers_per_session": {
+    "1": 287,
+    "2": 29,
+    "3": 1,
+    "6": 317
+  },
+  "verify_problems": []
+}

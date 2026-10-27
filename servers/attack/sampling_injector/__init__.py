@@ -1,0 +1,1 @@
+"""Inert sampling-request simulation."""

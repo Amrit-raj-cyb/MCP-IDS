@@ -1,0 +1,110 @@
+{
+  "all_sessions_ok": true,
+  "attack_family_counts": {
+    "poisoned_tool": 30,
+    "sampling_injection": 30,
+    "shadowing": 30
+  },
+  "attack_method_counts_by_family": {
+    "poisoned_tool": {
+      "initialize": 224,
+      "notifications/initialized": 112,
+      "proxy/client_eof": 112,
+      "proxy/start": 112,
+      "proxy/stop": 112,
+      "tools/call": 142,
+      "tools/list": 224
+    },
+    "sampling_injection": {
+      "initialize": 240,
+      "notifications/initialized": 120,
+      "proxy/client_eof": 120,
+      "proxy/start": 120,
+      "proxy/stop": 120,
+      "sampling/createMessage": 60,
+      "tools/call": 120,
+      "tools/list": 240
+    },
+    "shadowing": {
+      "initialize": 240,
+      "notifications/initialized": 120,
+      "proxy/client_eof": 120,
+      "proxy/start": 120,
+      "proxy/stop": 120,
+      "tools/call": 78,
+      "tools/list": 240
+    }
+  },
+  "attack_not_succeeded": 41,
+  "attack_succeeded": 49,
+  "attack_variant_counts": {
+    "duplicate_name_cross_reference": 30,
+    "overt": 6,
+    "padded": 6,
+    "param": 6,
+    "polite": 6,
+    "server_sampling_request": 30,
+    "tagged": 6
+  },
+  "dataset_sha256": "055c758b041da4df783ef5d971862e8721f2f75a94a8bd1927fb25ec48e22f38",
+  "dataset_tag": "phase9",
+  "direction_counts": {
+    "client_to_server": 2463,
+    "proxy": 2112,
+    "server_to_client": 1759
+  },
+  "event_count": 6334,
+  "generation_timestamp_utc": "2026-10-03T21:14:44+00:00",
+  "lab_versions": [
+    "0.8.1"
+  ],
+  "manifest_records": 180,
+  "method_counts": {
+    "initialize": 1408,
+    "notifications/initialized": 704,
+    "proxy/client_eof": 704,
+    "proxy/start": 704,
+    "proxy/stop": 704,
+    "sampling/createMessage": 60,
+    "tools/call": 642,
+    "tools/list": 1408
+  },
+  "n_attack": 90,
+  "n_benign": 90,
+  "n_sessions": 180,
+  "parallel": 4,
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "project_version": "0.1.0",
+  "python_version": "3.12.15",
+  "schema_version": 2,
+  "seed": 9000,
+  "server_count_distribution_by_attack_family": {
+    "poisoned_tool": {
+      "1": 8,
+      "2": 7,
+      "6": 15
+    },
+    "sampling_injection": {
+      "2": 15,
+      "6": 15
+    },
+    "shadowing": {
+      "2": 15,
+      "6": 15
+    }
+  },
+  "server_count_distribution_by_label": {
+    "attack": {
+      "1": 8,
+      "2": 37,
+      "6": 45
+    },
+    "benign": {
+      "1": 8,
+      "2": 37,
+      "6": 45
+    }
+  },
+  "unique_session_ids": 180,
+  "wire_event_count": 4222
+}

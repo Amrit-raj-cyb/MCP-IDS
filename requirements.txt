@@ -1,0 +1,15 @@
+# Runtime
+mcp==2.2.0            # Official MCP Python SDK (2.x: FastMCP was renamed MCPServer)
+anthropic==1.11.0     # Claude backend for the agent (optional at runtime; mock needs no key)
+
+# Testing
+pytest==9.1.1
+pytest-asyncio==1.4.0
+
+# ML pipeline (Phases 10-13)
+scikit-learn==1.9.1
+numpy==2.5.3
+pandas==3.0.6
+joblib==1.6.0
+xgboost-cpu==3.4.1    # XGBoost, CPU-only build (no GPU/NCCL libraries); imported as `xgboost`
+matplotlib==3.11.2    # evaluation plots (PNG, no display needed)

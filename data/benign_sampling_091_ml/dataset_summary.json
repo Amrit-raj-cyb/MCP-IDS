@@ -1,0 +1,23 @@
+{
+  "dataset_path": "/lab/data/benign_sampling_091",
+  "dataset_sha256": "06370ebfd8e8b433cb53ca2a8567f2b181dbb96adf471bd63ae43422a63c7367",
+  "generated_at": "2026-10-09T22:06:39+00:00",
+  "n_sessions": 232,
+  "n_benign": 232,
+  "n_attack": 0,
+  "attack_families": {},
+  "attack_variants": {},
+  "attack_succeeded": 0,
+  "n_features": 65,
+  "features_per_category": {
+    "structural": 26,
+    "behavioral": 19,
+    "content": 20
+  },
+  "n_wire_events": 6264,
+  "extractor_version": "1.0",
+  "lab_versions": {
+    "0.9.1": 232
+  },
+  "python": "3.12.15"
+}

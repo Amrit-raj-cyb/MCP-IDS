@@ -1,0 +1,4 @@
+# Store every file byte-for-byte: no line-ending conversion. The recorded traffic logs, manifests and
+# feature files must stay identical to what the laboratory wrote, and the Docker layer cache depends
+# on the exact bytes of requirements.txt.
+* -text

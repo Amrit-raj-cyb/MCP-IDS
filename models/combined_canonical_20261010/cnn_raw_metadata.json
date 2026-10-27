@@ -1,0 +1,64 @@
+{
+  "model": "cnn_raw",
+  "trained_at": "2026-10-10T13:03:01+00:00",
+  "pipeline_steps": [
+    "model"
+  ],
+  "params": {
+    "max_len": 32768,
+    "emb_dim": 8,
+    "arch": "pooled",
+    "channels": 64,
+    "kernel_size": 8,
+    "pool": 4,
+    "shift_augment": true,
+    "kernel_size2": 4,
+    "hidden": 32,
+    "dropout": 0.5,
+    "epochs": 15,
+    "batch_size": 32,
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "n_threads": 8
+  },
+  "tuned_params": {
+    "dropout": 0.5,
+    "learning_rate": 0.003,
+    "max_len": 32768
+  },
+  "tuning": {
+    "model": "cnn_raw",
+    "best_params": {
+      "dropout": 0.5,
+      "learning_rate": 0.003,
+      "max_len": 32768
+    },
+    "best_index": 6,
+    "inner_scheme": "GroupKFold(n_splits=3) on task_id, pooled out-of-fold F1",
+    "n_candidates": 8,
+    "default_f1": 0.1463,
+    "best_f1": 0.463
+  },
+  "seed": 42,
+  "input": "raw_session_text",
+  "raw_view_version": "1.0",
+  "features": [
+    "wire_text"
+  ],
+  "n_features": 1,
+  "feature_dir": "data\\combined_canonical_20261010_ml",
+  "dataset_path": "/lab/data/combined_canonical_20261010",
+  "dataset_sha256": "011239eb29cfd2353e191e5899e3bd4f9a86acfa610193708106114ea7d2e4d6",
+  "split_file": "split.json",
+  "n_train": 1540,
+  "versions": {
+    "python": "3.12.6",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0",
+    "xgboost": "3.4.1",
+    "torch": "2.13.0+cpu"
+  },
+  "positive_class": "attack (label == 'attack', i.e. attack_attempted)"
+}

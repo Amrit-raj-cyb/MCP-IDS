@@ -1,0 +1,33 @@
+{
+  "dataset_path": "C:\\Projects\\IDS\\data\\phase9_full_20261004",
+  "dataset_sha256": "8e28d534207074a2aa5f702cb56e6d99aed890bfbcec141276150e8cd5670da2",
+  "generated_at": "2026-10-03T20:40:15+00:00",
+  "n_sessions": 12,
+  "n_benign": 6,
+  "n_attack": 6,
+  "attack_families": {
+    "poisoned_tool": 4,
+    "shadowing": 1,
+    "sampling_injection": 1
+  },
+  "attack_variants": {
+    "overt": 2,
+    "tagged": 1,
+    "duplicate_name_cross_reference": 1,
+    "server_sampling_request": 1,
+    "param": 1
+  },
+  "attack_succeeded": 3,
+  "n_features": 62,
+  "features_per_category": {
+    "structural": 25,
+    "behavioral": 18,
+    "content": 19
+  },
+  "n_wire_events": 158,
+  "extractor_version": "1.0",
+  "lab_versions": {
+    "0.8.1": 12
+  },
+  "python": "3.12.6"
+}

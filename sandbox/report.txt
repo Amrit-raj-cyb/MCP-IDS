@@ -1,0 +1,9 @@
+Quarterly Report (SYNTHETIC)
+============================
+Region      Units   Revenue
+North       1200    48,000
+South        950    38,000
+East        1430    57,200
+West         780    31,200
+
+Summary: total synthetic revenue 174,400. No real organisation is described.

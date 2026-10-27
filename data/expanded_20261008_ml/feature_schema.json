@@ -1,0 +1,603 @@
+{
+  "extractor_version": "1.0",
+  "metadata_columns": [
+    "session_id",
+    "scenario_id",
+    "task_id",
+    "label",
+    "attack_family",
+    "attack_variant",
+    "attack_succeeded",
+    "seed",
+    "twin_of"
+  ],
+  "metadata_note": "Metadata columns identify sessions and carry labels. They are never model inputs.",
+  "neutralization": "common.simulation.neutralize(): removes '[LAB-SIMULATION]' and replaces the canary token in every message body before any feature is computed; sizes are recomputed from the neutralized JSON. Raw logs are not modified.",
+  "features": [
+    {
+      "name": "n_messages",
+      "category": "structural",
+      "dtype": "int",
+      "description": "Total JSON-RPC messages in the session",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_requests",
+      "category": "structural",
+      "dtype": "int",
+      "description": "Messages of kind request (either direction)",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_responses",
+      "category": "structural",
+      "dtype": "int",
+      "description": "Responses, including error responses",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_notifications",
+      "category": "structural",
+      "dtype": "int",
+      "description": "Notifications (no id)",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_protocol_errors",
+      "category": "structural",
+      "dtype": "int",
+      "description": "JSON-RPC error responses",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_tool_errors",
+      "category": "structural",
+      "dtype": "int",
+      "description": "tools/call results with isError=true",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "error_rate",
+      "category": "structural",
+      "dtype": "float",
+      "description": "(protocol + tool errors) / responses",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "request_response_ratio",
+      "category": "structural",
+      "dtype": "float",
+      "description": "requests / responses",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_client_to_server",
+      "category": "structural",
+      "dtype": "int",
+      "description": "Messages sent by the client",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_server_to_client",
+      "category": "structural",
+      "dtype": "int",
+      "description": "Messages sent by servers",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "server_initiated_request_count",
+      "category": "structural",
+      "dtype": "int",
+      "description": "Requests initiated by servers, including sampling/createMessage",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "client_share",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Share of messages sent by the client",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "size_mean",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Mean message size (bytes, neutralized)",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "size_std",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Std. dev. of message size",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "size_min",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Smallest message size",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "size_max",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Largest message size",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "size_total",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Total bytes exchanged",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_initialize",
+      "category": "structural",
+      "dtype": "int",
+      "description": "initialize requests (= servers connected)",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_tools_list",
+      "category": "structural",
+      "dtype": "int",
+      "description": "tools/list requests",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_tools_call",
+      "category": "structural",
+      "dtype": "int",
+      "description": "tools/call requests",
+      "source": "wire events (all servers of the session)",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "tools_list_resp_size_mean",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Mean size of tools/list responses",
+      "source": "tools/list responses",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "tools_list_resp_size_max",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Largest tools/list response",
+      "source": "tools/list responses",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "tools_call_req_size_mean",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Mean size of tools/call requests",
+      "source": "tools/call requests",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "tools_call_req_size_max",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Largest tools/call request",
+      "source": "tools/call requests",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "tools_call_resp_size_mean",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Mean size of tools/call results",
+      "source": "tools/call responses",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "tools_call_resp_size_max",
+      "category": "structural",
+      "dtype": "float",
+      "description": "Largest tools/call result",
+      "source": "tools/call responses",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "duplicate_tool_names_across_servers",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Distinct tool names advertised by more than one server",
+      "source": "tools/list responses across servers",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_distinct_tools_called",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Different tools called",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_servers_mounted",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Servers present in the session",
+      "source": "all wire events",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_servers_called",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Servers that received at least one tools/call",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "unused_server_share",
+      "category": "behavioral",
+      "dtype": "float",
+      "description": "Share of mounted servers never called",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "max_calls_per_server",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Most tools/call requests sent to one server",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_single_call_servers",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Servers called exactly once",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "first_call_server_single_use",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "1 if the first tool call goes to a server that is never called again",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "repeated_identical_calls",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Calls repeating an earlier tool + arguments",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "consecutive_same_tool",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Consecutive calls to the same tool",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_distinct_tool_bigrams",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Distinct (tool, next tool) pairs",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "cross_server_transitions",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Consecutive calls that switch server",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "cross_server_transition_share",
+      "category": "behavioral",
+      "dtype": "float",
+      "description": "cross_server_transitions / (calls - 1)",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "retries_after_error",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Failed call followed by a call to the same tool",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "calls_per_server_called",
+      "category": "behavioral",
+      "dtype": "float",
+      "description": "tools/call requests / servers called",
+      "source": "tools/call requests/responses and method order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "trans_list_to_call",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Client requests where tools/list is directly followed by tools/call",
+      "source": "client request order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "trans_call_to_call",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Client requests where tools/call is directly followed by tools/call",
+      "source": "client request order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_distinct_method_bigrams",
+      "category": "behavioral",
+      "dtype": "int",
+      "description": "Distinct consecutive (method, method) pairs among client messages",
+      "source": "client message order",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "client_messages_per_server",
+      "category": "behavioral",
+      "dtype": "float",
+      "description": "Client-to-server messages / servers mounted",
+      "source": "all wire events",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "n_tools_advertised",
+      "category": "content",
+      "dtype": "int",
+      "description": "Tools listed by all servers",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "desc_len_mean",
+      "category": "content",
+      "dtype": "float",
+      "description": "Mean tool-description length (chars)",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "desc_len_std",
+      "category": "content",
+      "dtype": "float",
+      "description": "Std. dev. of description length",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "desc_len_max",
+      "category": "content",
+      "dtype": "float",
+      "description": "Longest tool description",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "desc_words_max",
+      "category": "content",
+      "dtype": "float",
+      "description": "Most words in one description",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "desc_words_total",
+      "category": "content",
+      "dtype": "float",
+      "description": "Words across all descriptions",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "desc_sentences_max",
+      "category": "content",
+      "dtype": "float",
+      "description": "Most sentences in one description",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "param_desc_len_mean",
+      "category": "content",
+      "dtype": "float",
+      "description": "Mean parameter-description length",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "param_desc_len_max",
+      "category": "content",
+      "dtype": "float",
+      "description": "Longest parameter description",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "metadata_text_len_max",
+      "category": "content",
+      "dtype": "float",
+      "description": "Longest single metadata text",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "directive_word_count",
+      "category": "content",
+      "dtype": "int",
+      "description": "Directive/imperative words (must, always, before, ignore, ...) in all metadata",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "model_address_count",
+      "category": "content",
+      "dtype": "int",
+      "description": "Phrases addressing the model/agent (assistant, you, your, reply, ...)",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "secrecy_phrase_count",
+      "category": "content",
+      "dtype": "int",
+      "description": "Secrecy phrases (do not mention, hide, ...)",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "second_person_count",
+      "category": "content",
+      "dtype": "int",
+      "description": "Occurrences of 'you'/'your'",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "uppercase_word_count",
+      "category": "content",
+      "dtype": "int",
+      "description": "ALL-CAPS words of 3+ letters",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "markup_tag_count",
+      "category": "content",
+      "dtype": "int",
+      "description": "XML/HTML-like tags such as <important>",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "tool_name_mentions",
+      "category": "content",
+      "dtype": "int",
+      "description": "Mentions of advertised tool names inside metadata text",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "cross_server_tool_reference_count",
+      "category": "content",
+      "dtype": "int",
+      "description": "Tool descriptions that refer to a tool advertised by another server",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "max_directive_density",
+      "category": "content",
+      "dtype": "float",
+      "description": "Highest directive words per 100 words in any single text",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    },
+    {
+      "name": "max_desc_param_ratio",
+      "category": "content",
+      "dtype": "float",
+      "description": "Highest description length / (1 + number of parameters) over tools",
+      "source": "tools/list responses: tool descriptions + input-schema descriptions",
+      "preprocessing": "neutralize() applied to message bodies before extraction",
+      "used_for_training": true
+    }
+  ]
+}

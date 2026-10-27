@@ -1,0 +1,356 @@
+[
+  {
+    "feature_dir": "/lab/data/phase9_081_ml",
+    "n_sessions": 180,
+    "holdouts": {
+      "poisoned_tool/random_forest": {
+        "recall": 0.433,
+        "top_features": [
+          [
+            "max_desc_param_ratio",
+            0.185
+          ],
+          [
+            "desc_len_std",
+            0.167
+          ],
+          [
+            "desc_len_mean",
+            0.083
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": false,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "poisoned_tool/xgboost": {
+        "recall": 0.8,
+        "top_features": [
+          [
+            "desc_len_std",
+            1.0
+          ],
+          [
+            "max_desc_param_ratio",
+            0.0
+          ],
+          [
+            "max_directive_density",
+            0.0
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": false,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "sampling_injection/random_forest": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "tool_name_mentions",
+            0.108
+          ],
+          [
+            "desc_len_std",
+            0.105
+          ],
+          [
+            "desc_len_mean",
+            0.103
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": true,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "sampling_injection/xgboost": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "desc_len_mean",
+            0.412
+          ],
+          [
+            "tool_name_mentions",
+            0.352
+          ],
+          [
+            "size_max",
+            0.174
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": true,
+          "cross_server_tool_reference_count": false
+        }
+      }
+    },
+    "ranges": {
+      "desc_len_std": {
+        "benign_max": 34.7,
+        "poisoned_median": 52.5,
+        "share_poisoned_above_benign_max": 0.8
+      },
+      "desc_len_max": {
+        "benign_max": 172.0,
+        "poisoned_median": 212.0,
+        "share_poisoned_above_benign_max": 0.8
+      },
+      "directive_word_count": {
+        "benign_max": 2.0,
+        "poisoned_median": 5.0,
+        "share_poisoned_above_benign_max": 1.0
+      },
+      "model_address_count": {
+        "benign_max": 0.0,
+        "poisoned_median": 4.0,
+        "share_poisoned_above_benign_max": 1.0
+      }
+    },
+    "sampling_signature_median": {
+      "benign": 0.0,
+      "poisoned_tool": 0.0,
+      "sampling_injection": 1.0,
+      "shadowing": 0.0
+    }
+  },
+  {
+    "feature_dir": "/lab/data/phase9_expanded_20261006_ml",
+    "n_sessions": 720,
+    "holdouts": {
+      "poisoned_tool/random_forest": {
+        "recall": 0.425,
+        "top_features": [
+          [
+            "max_desc_param_ratio",
+            0.195
+          ],
+          [
+            "desc_len_std",
+            0.17
+          ],
+          [
+            "desc_len_mean",
+            0.084
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": false,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "poisoned_tool/xgboost": {
+        "recall": 0.8,
+        "top_features": [
+          [
+            "desc_len_std",
+            1.0
+          ],
+          [
+            "max_desc_param_ratio",
+            0.0
+          ],
+          [
+            "max_directive_density",
+            0.0
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": false,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "sampling_injection/random_forest": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "tool_name_mentions",
+            0.115
+          ],
+          [
+            "desc_len_mean",
+            0.106
+          ],
+          [
+            "desc_len_std",
+            0.103
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": true,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "sampling_injection/xgboost": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "desc_len_mean",
+            0.448
+          ],
+          [
+            "tool_name_mentions",
+            0.375
+          ],
+          [
+            "size_max",
+            0.157
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": true,
+          "cross_server_tool_reference_count": false
+        }
+      }
+    },
+    "ranges": {
+      "desc_len_std": {
+        "benign_max": 34.7,
+        "poisoned_median": 52.5,
+        "share_poisoned_above_benign_max": 0.8
+      },
+      "desc_len_max": {
+        "benign_max": 172.0,
+        "poisoned_median": 212.0,
+        "share_poisoned_above_benign_max": 0.8
+      },
+      "directive_word_count": {
+        "benign_max": 2.0,
+        "poisoned_median": 5.0,
+        "share_poisoned_above_benign_max": 1.0
+      },
+      "model_address_count": {
+        "benign_max": 0.0,
+        "poisoned_median": 4.0,
+        "share_poisoned_above_benign_max": 1.0
+      }
+    },
+    "sampling_signature_median": {
+      "benign": 0.0,
+      "poisoned_tool": 0.0,
+      "sampling_injection": 1.0,
+      "shadowing": 0.0
+    }
+  },
+  {
+    "feature_dir": "/lab/data/expanded_20261008_ml",
+    "n_sessions": 1354,
+    "holdouts": {
+      "poisoned_tool/random_forest": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "max_desc_param_ratio",
+            0.153
+          ],
+          [
+            "desc_len_std",
+            0.127
+          ],
+          [
+            "tools_call_req_size_mean",
+            0.083
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": false,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "poisoned_tool/xgboost": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "max_desc_param_ratio",
+            0.805
+          ],
+          [
+            "size_std",
+            0.181
+          ],
+          [
+            "tools_call_req_size_mean",
+            0.013
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": false,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "sampling_injection/random_forest": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "tool_name_mentions",
+            0.174
+          ],
+          [
+            "desc_len_std",
+            0.105
+          ],
+          [
+            "metadata_text_len_max",
+            0.095
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": true,
+          "cross_server_tool_reference_count": false
+        }
+      },
+      "sampling_injection/xgboost": {
+        "recall": 0.0,
+        "top_features": [
+          [
+            "tool_name_mentions",
+            0.773
+          ],
+          [
+            "desc_len_max",
+            0.212
+          ],
+          [
+            "desc_len_std",
+            0.011
+          ]
+        ],
+        "signature_constant_in_training": {
+          "server_initiated_request_count": true,
+          "cross_server_tool_reference_count": false
+        }
+      }
+    },
+    "ranges": {
+      "desc_len_std": {
+        "benign_max": 79.2,
+        "poisoned_median": 52.5,
+        "share_poisoned_above_benign_max": 0.25
+      },
+      "desc_len_max": {
+        "benign_max": 231.0,
+        "poisoned_median": 212.0,
+        "share_poisoned_above_benign_max": 0.4
+      },
+      "directive_word_count": {
+        "benign_max": 5.0,
+        "poisoned_median": 5.0,
+        "share_poisoned_above_benign_max": 0.2
+      },
+      "model_address_count": {
+        "benign_max": 5.0,
+        "poisoned_median": 4.0,
+        "share_poisoned_above_benign_max": 0.0
+      }
+    },
+    "sampling_signature_median": {
+      "benign": 0.0,
+      "poisoned_tool": 0.0,
+      "sampling_injection": 1.0,
+      "shadowing": 0.0
+    }
+  }
+]

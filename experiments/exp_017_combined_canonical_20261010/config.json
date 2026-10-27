@@ -1,0 +1,232 @@
+{
+  "experiment_id": "exp_017_combined_canonical_20261010",
+  "dataset": {
+    "dataset_path": "/lab/data/combined_canonical_20261010",
+    "dataset_sha256": "011239eb29cfd2353e191e5899e3bd4f9a86acfa610193708106114ea7d2e4d6",
+    "n_sessions": 2220,
+    "n_benign": 1860,
+    "n_attack": 360,
+    "attack_families": {
+      "poisoned_tool": 120,
+      "sampling_injection": 120,
+      "shadowing": 120
+    },
+    "attack_variants": {
+      "overt": 24,
+      "polite": 24,
+      "tagged": 24,
+      "padded": 24,
+      "param": 24,
+      "server_sampling_request": 120,
+      "duplicate_name_cross_reference": 120
+    },
+    "attack_succeeded": 213
+  },
+  "feature_dir": "data\\combined_canonical_20261010_ml",
+  "model_dir": "models\\combined_canonical_20261010",
+  "results_dir": "results\\combined_canonical_20261010",
+  "split": {
+    "seed": 42,
+    "test_size": 0.3,
+    "method": "task-grouped",
+    "stratified_on": "label+attack_family",
+    "grouped_on": "task_id",
+    "n_train_tasks": 28,
+    "n_test_tasks": 14,
+    "tasks_in_both": [],
+    "n_train": 1540,
+    "n_test": 680,
+    "train_benign": 1240,
+    "train_attack": 300,
+    "test_benign": 620,
+    "test_attack": 60
+  },
+  "models": {
+    "random_forest": {
+      "params": {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "class_weight": "balanced",
+        "n_jobs": 1,
+        "max_features": 0.5
+      },
+      "tuned_params": {
+        "max_depth": null,
+        "max_features": 0.5,
+        "min_samples_leaf": 1,
+        "n_estimators": 300
+      },
+      "pipeline_steps": [
+        "impute",
+        "model"
+      ]
+    },
+    "svm": {
+      "params": {
+        "kernel": "rbf",
+        "C": 0.1,
+        "gamma": 0.01,
+        "class_weight": "balanced"
+      },
+      "tuned_params": {
+        "C": 0.1,
+        "gamma": 0.01
+      },
+      "pipeline_steps": [
+        "impute",
+        "scale",
+        "model"
+      ]
+    },
+    "xgboost": {
+      "params": {
+        "n_estimators": 300,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "tree_method": "hist",
+        "eval_metric": "logloss",
+        "n_jobs": 1,
+        "class_weight": "balanced (per-sample weights)"
+      },
+      "tuned_params": {
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "n_estimators": 300,
+        "subsample": 1.0
+      },
+      "pipeline_steps": [
+        "impute",
+        "model"
+      ]
+    },
+    "rf_xgb": {
+      "params": {
+        "voting": "soft (mean attack probability, threshold 0.5)",
+        "weights": "equal",
+        "random_forest": {
+          "n_estimators": 300,
+          "max_depth": null,
+          "min_samples_leaf": 1,
+          "class_weight": "balanced",
+          "n_jobs": 1,
+          "max_features": 0.5
+        },
+        "xgboost": {
+          "n_estimators": 300,
+          "learning_rate": 0.3,
+          "max_depth": 3,
+          "subsample": 1.0,
+          "colsample_bytree": 1.0,
+          "tree_method": "hist",
+          "eval_metric": "logloss",
+          "n_jobs": 1,
+          "class_weight": "balanced (per-sample weights)"
+        }
+      },
+      "tuned_params": {
+        "random_forest": {
+          "max_depth": null,
+          "max_features": 0.5,
+          "min_samples_leaf": 1,
+          "n_estimators": 300
+        },
+        "xgboost": {
+          "learning_rate": 0.3,
+          "max_depth": 3,
+          "n_estimators": 300,
+          "subsample": 1.0
+        }
+      },
+      "pipeline_steps": [
+        "impute",
+        "model"
+      ]
+    },
+    "decision_tree": {
+      "params": {
+        "criterion": "gini",
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "class_weight": "balanced"
+      },
+      "tuned_params": {
+        "criterion": "gini",
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "pipeline_steps": [
+        "impute",
+        "model"
+      ]
+    },
+    "cnn": {
+      "params": {
+        "channels": [
+          32,
+          64
+        ],
+        "kernel_size": 3,
+        "hidden": 32,
+        "dropout": 0.5,
+        "epochs": 100,
+        "batch_size": 64,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      "tuned_params": {
+        "channels": [
+          32,
+          64
+        ],
+        "dropout": 0.5,
+        "epochs": 100,
+        "learning_rate": 0.001
+      },
+      "pipeline_steps": [
+        "impute",
+        "scale",
+        "model"
+      ]
+    },
+    "cnn_raw": {
+      "params": {
+        "max_len": 32768,
+        "emb_dim": 8,
+        "arch": "pooled",
+        "channels": 64,
+        "kernel_size": 8,
+        "pool": 4,
+        "shift_augment": true,
+        "kernel_size2": 4,
+        "hidden": 32,
+        "dropout": 0.5,
+        "epochs": 15,
+        "batch_size": 32,
+        "learning_rate": 0.003,
+        "weight_decay": 0.0001,
+        "n_threads": 8
+      },
+      "tuned_params": {
+        "dropout": 0.5,
+        "learning_rate": 0.003,
+        "max_len": 32768
+      },
+      "pipeline_steps": [
+        "model"
+      ]
+    }
+  },
+  "n_features": 65,
+  "versions": {
+    "python": "3.12.6",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0",
+    "xgboost": "3.4.1",
+    "torch": "2.13.0+cpu"
+  }
+}

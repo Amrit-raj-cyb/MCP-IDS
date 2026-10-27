@@ -1,0 +1,41 @@
+{
+  "all_sessions_ok": true,
+  "attack_family_counts": {
+    "poisoned_tool": 4,
+    "sampling_injection": 1,
+    "shadowing": 1
+  },
+  "attack_not_succeeded": 3,
+  "attack_succeeded": 3,
+  "attack_variant_counts": {
+    "duplicate_name_cross_reference": 1,
+    "overt": 2,
+    "param": 1,
+    "server_sampling_request": 1,
+    "tagged": 1
+  },
+  "dataset_sha256": "2b601bb965cf07597ea0acbf853a573e7e0873706ca235101c8ab84cc8866f6a",
+  "dataset_tag": "phase9",
+  "direction_counts": {
+    "client_to_server": 89,
+    "proxy": 60,
+    "server_to_client": 69
+  },
+  "event_count": 218,
+  "generation_timestamp_utc": "2026-10-03T20:39:58+00:00",
+  "lab_versions": [
+    "0.8.1"
+  ],
+  "manifest_records": 12,
+  "n_attack": 6,
+  "n_benign": 6,
+  "n_sessions": 12,
+  "parallel": 2,
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "project_version": "0.1.0",
+  "python_version": "3.12.15",
+  "schema_version": 2,
+  "seed": 9000,
+  "unique_session_ids": 12,
+  "wire_event_count": 158
+}

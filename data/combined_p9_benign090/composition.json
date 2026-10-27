@@ -1,0 +1,37 @@
+{
+  "composed_at": "2026-10-05T23:15:12+00:00",
+  "sources": [
+    {
+      "path": "C:\\Projects\\IDS\\data\\phase9_081_targeted",
+      "dataset_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+      "n_sessions": 180,
+      "labels": {
+        "attack": 90,
+        "benign": 90
+      },
+      "attack_families": {
+        "poisoned_tool": 30,
+        "sampling_injection": 30,
+        "shadowing": 30
+      },
+      "lab_versions": {
+        "0.8.1": 180
+      }
+    },
+    {
+      "path": "C:\\Projects\\IDS\\data\\benign_unique_090",
+      "dataset_sha256": "12a010f1cdfbe55bae4ebd94dc425ad0f9543759ed7cd59ab432950d0d4dcf6a",
+      "n_sessions": 634,
+      "labels": {
+        "benign": 634
+      },
+      "attack_families": {},
+      "lab_versions": {
+        "0.9.0": 634
+      }
+    }
+  ],
+  "n_sessions": 814,
+  "dataset_sha256": "388251d5f768f3bdeacaa9c741845288f2cd88c99d4d9de3bfd6d9d5d43e104c",
+  "verify_problems": []
+}

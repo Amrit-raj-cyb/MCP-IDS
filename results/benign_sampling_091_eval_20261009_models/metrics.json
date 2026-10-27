@@ -1,0 +1,751 @@
+{
+  "created_at": "2026-10-09T22:09:43+00:00",
+  "features_dir": "data/benign_sampling_091_ml",
+  "dataset_sha256": "06370ebfd8e8b433cb53ca2a8567f2b181dbb96adf471bd63ae43422a63c7367",
+  "n_sessions": 232,
+  "n_benign": 232,
+  "n_attack": 0,
+  "n_distinct_vectors": 216,
+  "models": [
+    {
+      "model": "expanded_20261009/random_forest",
+      "model_path": "models/expanded_20261009/random_forest.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "input": "features",
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.45
+      },
+      "task_seen_in_training": {
+        "n": 0
+      },
+      "task_not_seen_in_training": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.45
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 0,
+      "by_n_servers": {
+        "1": {
+          "n": 60,
+          "n_benign": 60,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 60,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0602
+          ],
+          "max_benign_score": 0.2333
+        },
+        "2": {
+          "n": 56,
+          "n_benign": 56,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0642
+          ],
+          "max_benign_score": 0.45
+        },
+        "7": {
+          "n": 116,
+          "n_benign": 116,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 116,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0321
+          ],
+          "max_benign_score": 0.4333
+        }
+      },
+      "flagged_benign_scenarios": {}
+    },
+    {
+      "model": "expanded_20261009/svm",
+      "model_path": "models/expanded_20261009/svm.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "input": "features",
+      "score_kind": "SVM margin (>0 means attack)",
+      "all": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 0.556,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.444,
+        "confusion_matrix": {
+          "tn": 129,
+          "fp": 103,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3815,
+          0.5083
+        ],
+        "max_benign_score": 0.7481
+      },
+      "task_seen_in_training": {
+        "n": 0
+      },
+      "task_not_seen_in_training": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 0.556,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.444,
+        "confusion_matrix": {
+          "tn": 129,
+          "fp": 103,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3815,
+          0.5083
+        ],
+        "max_benign_score": 0.7481
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 0,
+      "by_n_servers": {
+        "1": {
+          "n": 60,
+          "n_benign": 60,
+          "n_attack": 0,
+          "accuracy": 0.9167,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0833,
+          "confusion_matrix": {
+            "tn": 55,
+            "fp": 5,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0361,
+            0.1807
+          ],
+          "max_benign_score": 0.0211
+        },
+        "2": {
+          "n": 56,
+          "n_benign": 56,
+          "n_attack": 0,
+          "accuracy": 0.3571,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6429,
+          "confusion_matrix": {
+            "tn": 20,
+            "fp": 36,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.5119,
+            0.7554
+          ],
+          "max_benign_score": 0.3904
+        },
+        "7": {
+          "n": 116,
+          "n_benign": 116,
+          "n_attack": 0,
+          "accuracy": 0.4655,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.5345,
+          "confusion_matrix": {
+            "tn": 54,
+            "fp": 62,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4441,
+            0.6227
+          ],
+          "max_benign_score": 0.7481
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:helpdesk_triage_ticket:all_servers": 32,
+        "benign:helpdesk_order_reply": 24,
+        "benign:helpdesk_order_reply:all_servers": 18,
+        "benign:assist_translate_notes": 12,
+        "benign:assist_translate_notes:all_servers": 12,
+        "benign:helpdesk_triage_ticket": 5
+      }
+    },
+    {
+      "model": "expanded_20261009/xgboost",
+      "model_path": "models/expanded_20261009/xgboost.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "input": "features",
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.0896
+      },
+      "task_seen_in_training": {
+        "n": 0
+      },
+      "task_not_seen_in_training": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.0896
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 0,
+      "by_n_servers": {
+        "1": {
+          "n": 60,
+          "n_benign": 60,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 60,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0602
+          ],
+          "max_benign_score": 0.0777
+        },
+        "2": {
+          "n": 56,
+          "n_benign": 56,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0642
+          ],
+          "max_benign_score": 0.0483
+        },
+        "7": {
+          "n": 116,
+          "n_benign": 116,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 116,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0321
+          ],
+          "max_benign_score": 0.0896
+        }
+      },
+      "flagged_benign_scenarios": {}
+    },
+    {
+      "model": "expanded_20261009/rf_xgb",
+      "model_path": "models/expanded_20261009/rf_xgb.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "input": "features",
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.2492
+      },
+      "task_seen_in_training": {
+        "n": 0
+      },
+      "task_not_seen_in_training": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.2492
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 0,
+      "by_n_servers": {
+        "1": {
+          "n": 60,
+          "n_benign": 60,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 60,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0602
+          ],
+          "max_benign_score": 0.1364
+        },
+        "2": {
+          "n": 56,
+          "n_benign": 56,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0642
+          ],
+          "max_benign_score": 0.2492
+        },
+        "7": {
+          "n": 116,
+          "n_benign": 116,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 116,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0321
+          ],
+          "max_benign_score": 0.242
+        }
+      },
+      "flagged_benign_scenarios": {}
+    },
+    {
+      "model": "expanded_20261009/decision_tree",
+      "model_path": "models/expanded_20261009/decision_tree.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "input": "features",
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.0
+      },
+      "task_seen_in_training": {
+        "n": 0
+      },
+      "task_not_seen_in_training": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 232,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.0163
+        ],
+        "max_benign_score": 0.0
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 0,
+      "by_n_servers": {
+        "1": {
+          "n": 60,
+          "n_benign": 60,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 60,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0602
+          ],
+          "max_benign_score": 0.0
+        },
+        "2": {
+          "n": 56,
+          "n_benign": 56,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0642
+          ],
+          "max_benign_score": 0.0
+        },
+        "7": {
+          "n": 116,
+          "n_benign": 116,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 116,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0321
+          ],
+          "max_benign_score": 0.0
+        }
+      },
+      "flagged_benign_scenarios": {}
+    },
+    {
+      "model": "expanded_20261009/cnn",
+      "model_path": "models/expanded_20261009/cnn.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "input": "features",
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 0.2716,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.7284,
+        "confusion_matrix": {
+          "tn": 63,
+          "fp": 169,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.6678,
+          0.7816
+        ],
+        "max_benign_score": 1.0
+      },
+      "task_seen_in_training": {
+        "n": 0
+      },
+      "task_not_seen_in_training": {
+        "n": 232,
+        "n_benign": 232,
+        "n_attack": 0,
+        "accuracy": 0.2716,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.7284,
+        "confusion_matrix": {
+          "tn": 63,
+          "fp": 169,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.6678,
+          0.7816
+        ],
+        "max_benign_score": 1.0
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 0,
+      "by_n_servers": {
+        "1": {
+          "n": 60,
+          "n_benign": 60,
+          "n_attack": 0,
+          "accuracy": 0.3833,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6167,
+          "confusion_matrix": {
+            "tn": 23,
+            "fp": 37,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4902,
+            0.7291
+          ],
+          "max_benign_score": 1.0
+        },
+        "2": {
+          "n": 56,
+          "n_benign": 56,
+          "n_attack": 0,
+          "accuracy": 0.2143,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.7857,
+          "confusion_matrix": {
+            "tn": 12,
+            "fp": 44,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.6618,
+            0.8729
+          ],
+          "max_benign_score": 1.0
+        },
+        "7": {
+          "n": 116,
+          "n_benign": 116,
+          "n_attack": 0,
+          "accuracy": 0.2414,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.7586,
+          "confusion_matrix": {
+            "tn": 28,
+            "fp": 88,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.6733,
+            0.8274
+          ],
+          "max_benign_score": 1.0
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:helpdesk_triage_ticket:all_servers": 44,
+        "benign:helpdesk_triage_ticket": 37,
+        "benign:helpdesk_order_reply": 24,
+        "benign:helpdesk_order_reply:all_servers": 24,
+        "benign:assist_translate_notes": 20,
+        "benign:assist_translate_notes:all_servers": 20
+      }
+    }
+  ]
+}

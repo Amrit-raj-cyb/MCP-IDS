@@ -1,0 +1,64 @@
+# MCP-IDS laboratory - Docker Compose baseline (Phase 1)
+#
+#   docker compose build
+#   docker compose run --rm lab                          # run the test suite
+#   docker compose run --rm lab python -m agent.client   # scripted MCP demo
+#   docker compose run --rm lab python -m orchestrator.main batch --scenarios benign --parallel 4
+#   docker compose down                                  # stop testweb afterwards
+#
+# Isolation choices:
+#   * labnet is `internal: true` -> containers have NO route to the internet
+#     or your LAN. No ports are published to the host.
+  #   * Only explicitly scoped project data/output folders are mounted. Source
+  #     code and the synthetic sandbox are baked into the image.
+#   * Non-root user, all Linux capabilities dropped, no privilege escalation.
+
+name: mcp-ids
+
+services:
+  lab:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      # Optional offline wheelhouse for pip (see docker/wheels/README.txt); may be empty.
+      additional_contexts:
+        wheels: ./docker/wheels
+    image: mcp-ids-lab:0.9.1
+    # Tiny init as PID 1: forwards stop signals and reaps the many short-lived
+    # proxy/server child processes each session creates.
+    init: true
+    environment:
+      LOG_LEVEL: ${LOG_LEVEL:-WARNING}   # set LOG_LEVEL=INFO for verbose server logs
+      # The web-fetch MCP server may only fetch from this origin.
+      MCP_WEB_BASE_URL: http://testweb:8080
+    depends_on: [testweb]
+    volumes:
+      - ./data:/lab/data
+      - ./models:/lab/models
+      - ./results:/lab/results
+      - ./experiments:/lab/experiments
+    networks: [labnet]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    # ~420 MB per concurrent six-server session (measured); 2g fits --parallel 4.
+    # Override with LAB_MEM_LIMIT; too little memory gets the orchestrator OOM-killed.
+    mem_limit: ${LAB_MEM_LIMIT:-2g}
+    pids_limit: 256
+
+  # Static synthetic website for the web-fetch MCP server (Phase 4).
+  # Same image, different command. Reachable only as http://testweb:8080 on
+  # the internal lab network; no ports are published to the host.
+  testweb:
+    image: mcp-ids-lab:0.9.1
+    command: ["python", "-m", "servers.benign.web_fetch.testsite", "--host", "0.0.0.0", "--port", "8080"]
+    init: true
+    networks: [labnet]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 128m
+    pids_limit: 64
+
+networks:
+  labnet:
+    internal: true

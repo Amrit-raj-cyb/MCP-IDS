@@ -1,0 +1,59 @@
+{
+  "dataset_tag": "benign_unique",
+  "description_variant": "2",
+  "generated_at_utc": "2026-10-09T21:39:29+00:00",
+  "lab_version": "0.9.1",
+  "llm": "mock",
+  "n_jobs": 58,
+  "parallel": 3,
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "python": "3.12.15",
+  "search": 2000,
+  "seed_base": 80000,
+  "seeds": {
+    "assist_summarize_text": [
+      80000,
+      80002,
+      80004
+    ],
+    "assist_translate_notes": [
+      80000,
+      80001,
+      80002,
+      80003,
+      80004,
+      80007,
+      80014,
+      80018
+    ],
+    "helpdesk_order_reply": [
+      80000,
+      80004,
+      80005,
+      80006,
+      80011,
+      80021
+    ],
+    "helpdesk_triage_ticket": [
+      80000,
+      80001,
+      80002,
+      80003,
+      80004,
+      80005,
+      80007,
+      80008,
+      80010,
+      80014,
+      80015,
+      80017
+    ]
+  },
+  "server_mix": "both",
+  "tasks": [
+    "assist_summarize_text",
+    "assist_translate_notes",
+    "helpdesk_triage_ticket",
+    "helpdesk_order_reply"
+  ]
+}

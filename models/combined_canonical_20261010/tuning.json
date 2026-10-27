@@ -1,0 +1,1243 @@
+{
+  "random_forest": {
+    "model": "random_forest",
+    "best_params": {
+      "max_depth": null,
+      "max_features": 0.5,
+      "min_samples_leaf": 1,
+      "n_estimators": 300
+    },
+    "best_index": 4,
+    "inner_scheme": "GroupKFold(n_splits=3) on task_id, pooled out-of-fold F1",
+    "n_candidates": 16,
+    "default_f1": 0.4576,
+    "best_f1": 0.6652,
+    "candidates": [
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "n_estimators": 300
+        },
+        "f1": 0.4576,
+        "recall": 0.2967,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "n_estimators": 600
+        },
+        "f1": 0.481,
+        "recall": 0.3167,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 3,
+          "n_estimators": 300
+        },
+        "f1": 0.4496,
+        "recall": 0.29,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 3,
+          "n_estimators": 600
+        },
+        "f1": 0.4615,
+        "recall": 0.3,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": 0.5,
+          "min_samples_leaf": 1,
+          "n_estimators": 300
+        },
+        "f1": 0.6652,
+        "recall": 0.5,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": 0.5,
+          "min_samples_leaf": 1,
+          "n_estimators": 600
+        },
+        "f1": 0.5529,
+        "recall": 0.3833,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": 0.5,
+          "min_samples_leaf": 3,
+          "n_estimators": 300
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "max_depth": null,
+          "max_features": 0.5,
+          "min_samples_leaf": 3,
+          "n_estimators": 600
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "n_estimators": 300
+        },
+        "f1": 0.4536,
+        "recall": 0.2933,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "n_estimators": 600
+        },
+        "f1": 0.481,
+        "recall": 0.3167,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": "sqrt",
+          "min_samples_leaf": 3,
+          "n_estimators": 300
+        },
+        "f1": 0.4496,
+        "recall": 0.29,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": "sqrt",
+          "min_samples_leaf": 3,
+          "n_estimators": 600
+        },
+        "f1": 0.4615,
+        "recall": 0.3,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": 0.5,
+          "min_samples_leaf": 1,
+          "n_estimators": 300
+        },
+        "f1": 0.6652,
+        "recall": 0.5,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": 0.5,
+          "min_samples_leaf": 1,
+          "n_estimators": 600
+        },
+        "f1": 0.5529,
+        "recall": 0.3833,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": 0.5,
+          "min_samples_leaf": 3,
+          "n_estimators": 300
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "max_depth": 8,
+          "max_features": 0.5,
+          "min_samples_leaf": 3,
+          "n_estimators": 600
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      }
+    ]
+  },
+  "svm": {
+    "model": "svm",
+    "best_params": {
+      "C": 0.1,
+      "gamma": 0.01
+    },
+    "best_index": 6,
+    "inner_scheme": "GroupKFold(n_splits=3) on task_id, pooled out-of-fold F1",
+    "n_candidates": 16,
+    "default_f1": 0.478,
+    "best_f1": 0.6542,
+    "candidates": [
+      {
+        "params": {
+          "C": 1.0,
+          "gamma": "scale"
+        },
+        "f1": 0.478,
+        "recall": 0.3433,
+        "fpr": 0.0226
+      },
+      {
+        "params": {
+          "C": 1.0,
+          "gamma": 0.001
+        },
+        "f1": 0.6099,
+        "recall": 0.5967,
+        "fpr": 0.0871
+      },
+      {
+        "params": {
+          "C": 1.0,
+          "gamma": 0.01
+        },
+        "f1": 0.4337,
+        "recall": 0.3433,
+        "fpr": 0.0581
+      },
+      {
+        "params": {
+          "C": 1.0,
+          "gamma": 0.1
+        },
+        "f1": 0.2353,
+        "recall": 0.1333,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "C": 0.1,
+          "gamma": "scale"
+        },
+        "f1": 0.4723,
+        "recall": 0.3267,
+        "fpr": 0.0137
+      },
+      {
+        "params": {
+          "C": 0.1,
+          "gamma": 0.001
+        },
+        "f1": 0.5765,
+        "recall": 0.59,
+        "fpr": 0.1105
+      },
+      {
+        "params": {
+          "C": 0.1,
+          "gamma": 0.01
+        },
+        "f1": 0.6542,
+        "recall": 0.5833,
+        "fpr": 0.0484
+      },
+      {
+        "params": {
+          "C": 0.1,
+          "gamma": 0.1
+        },
+        "f1": 0.0066,
+        "recall": 0.0033,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "C": 10.0,
+          "gamma": "scale"
+        },
+        "f1": 0.478,
+        "recall": 0.3433,
+        "fpr": 0.0226
+      },
+      {
+        "params": {
+          "C": 10.0,
+          "gamma": 0.001
+        },
+        "f1": 0.4031,
+        "recall": 0.3433,
+        "fpr": 0.0871
+      },
+      {
+        "params": {
+          "C": 10.0,
+          "gamma": 0.01
+        },
+        "f1": 0.4374,
+        "recall": 0.3433,
+        "fpr": 0.0548
+      },
+      {
+        "params": {
+          "C": 10.0,
+          "gamma": 0.1
+        },
+        "f1": 0.2353,
+        "recall": 0.1333,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "C": 100.0,
+          "gamma": "scale"
+        },
+        "f1": 0.478,
+        "recall": 0.3433,
+        "fpr": 0.0226
+      },
+      {
+        "params": {
+          "C": 100.0,
+          "gamma": 0.001
+        },
+        "f1": 0.4063,
+        "recall": 0.3433,
+        "fpr": 0.0839
+      },
+      {
+        "params": {
+          "C": 100.0,
+          "gamma": 0.01
+        },
+        "f1": 0.4374,
+        "recall": 0.3433,
+        "fpr": 0.0548
+      },
+      {
+        "params": {
+          "C": 100.0,
+          "gamma": 0.1
+        },
+        "f1": 0.2353,
+        "recall": 0.1333,
+        "fpr": 0.0
+      }
+    ]
+  },
+  "xgboost": {
+    "model": "xgboost",
+    "best_params": {
+      "learning_rate": 0.3,
+      "max_depth": 3,
+      "n_estimators": 300,
+      "subsample": 1.0
+    },
+    "best_index": 4,
+    "inner_scheme": "GroupKFold(n_splits=3) on task_id, pooled out-of-fold F1",
+    "n_candidates": 24,
+    "default_f1": 0.6593,
+    "best_f1": 0.6667,
+    "candidates": [
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 6,
+          "n_estimators": 300,
+          "subsample": 1.0
+        },
+        "f1": 0.6593,
+        "recall": 0.5,
+        "fpr": 0.004
+      },
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 6,
+          "n_estimators": 300,
+          "subsample": 0.8
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 6,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "f1": 0.6579,
+        "recall": 0.5,
+        "fpr": 0.0048
+      },
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 6,
+          "n_estimators": 100,
+          "subsample": 0.8
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 3,
+          "n_estimators": 300,
+          "subsample": 1.0
+        },
+        "f1": 0.6667,
+        "recall": 0.5,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 3,
+          "n_estimators": 300,
+          "subsample": 0.8
+        },
+        "f1": 0.6623,
+        "recall": 0.5,
+        "fpr": 0.0024
+      },
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 3,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "f1": 0.6667,
+        "recall": 0.5,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "learning_rate": 0.3,
+          "max_depth": 3,
+          "n_estimators": 100,
+          "subsample": 0.8
+        },
+        "f1": 0.6608,
+        "recall": 0.5,
+        "fpr": 0.0032
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "n_estimators": 300,
+          "subsample": 1.0
+        },
+        "f1": 0.6637,
+        "recall": 0.5,
+        "fpr": 0.0016
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "n_estimators": 300,
+          "subsample": 0.8
+        },
+        "f1": 0.6608,
+        "recall": 0.5,
+        "fpr": 0.0032
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "f1": 0.6637,
+        "recall": 0.5,
+        "fpr": 0.0016
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 6,
+          "n_estimators": 100,
+          "subsample": 0.8
+        },
+        "f1": 0.6608,
+        "recall": 0.5,
+        "fpr": 0.0032
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 3,
+          "n_estimators": 300,
+          "subsample": 1.0
+        },
+        "f1": 0.6667,
+        "recall": 0.5,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 3,
+          "n_estimators": 300,
+          "subsample": 0.8
+        },
+        "f1": 0.6652,
+        "recall": 0.5,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 3,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "f1": 0.6667,
+        "recall": 0.5,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "learning_rate": 0.1,
+          "max_depth": 3,
+          "n_estimators": 100,
+          "subsample": 0.8
+        },
+        "f1": 0.6652,
+        "recall": 0.5,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 6,
+          "n_estimators": 300,
+          "subsample": 1.0
+        },
+        "f1": 0.6637,
+        "recall": 0.5,
+        "fpr": 0.0016
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 6,
+          "n_estimators": 300,
+          "subsample": 0.8
+        },
+        "f1": 0.6608,
+        "recall": 0.5,
+        "fpr": 0.0032
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 6,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "f1": 0.6494,
+        "recall": 0.5,
+        "fpr": 0.0097
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 6,
+          "n_estimators": 100,
+          "subsample": 0.8
+        },
+        "f1": 0.6536,
+        "recall": 0.5,
+        "fpr": 0.0073
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 3,
+          "n_estimators": 300,
+          "subsample": 1.0
+        },
+        "f1": 0.6652,
+        "recall": 0.5,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 3,
+          "n_estimators": 300,
+          "subsample": 0.8
+        },
+        "f1": 0.6652,
+        "recall": 0.5,
+        "fpr": 0.0008
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 3,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "f1": 0.6438,
+        "recall": 0.5,
+        "fpr": 0.0129
+      },
+      {
+        "params": {
+          "learning_rate": 0.03,
+          "max_depth": 3,
+          "n_estimators": 100,
+          "subsample": 0.8
+        },
+        "f1": 0.6536,
+        "recall": 0.5,
+        "fpr": 0.0073
+      }
+    ]
+  },
+  "decision_tree": {
+    "model": "decision_tree",
+    "best_params": {
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 1
+    },
+    "best_index": 0,
+    "inner_scheme": "GroupKFold(n_splits=3) on task_id, pooled out-of-fold F1",
+    "n_candidates": 24,
+    "default_f1": 0.6565,
+    "best_f1": 0.6565,
+    "candidates": [
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": null,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": null,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": null,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 3,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 3,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 3,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 5,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 5,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 5,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 8,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 8,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "gini",
+          "max_depth": 8,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": null,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": null,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": null,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 3,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 3,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 3,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 5,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 5,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 5,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 8,
+          "min_samples_leaf": 1
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 8,
+          "min_samples_leaf": 3
+        },
+        "f1": 0.6565,
+        "recall": 0.5,
+        "fpr": 0.0056
+      },
+      {
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 8,
+          "min_samples_leaf": 10
+        },
+        "f1": 0.6024,
+        "recall": 0.5,
+        "fpr": 0.0387
+      }
+    ]
+  },
+  "cnn": {
+    "model": "cnn",
+    "best_params": {
+      "channels": [
+        32,
+        64
+      ],
+      "dropout": 0.5,
+      "epochs": 100,
+      "learning_rate": 0.001
+    },
+    "best_index": 14,
+    "inner_scheme": "GroupKFold(n_splits=3) on task_id, pooled out-of-fold F1",
+    "n_candidates": 16,
+    "default_f1": 0.651,
+    "best_f1": 0.6618,
+    "candidates": [
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.2,
+          "epochs": 50,
+          "learning_rate": 0.001
+        },
+        "f1": 0.651,
+        "recall": 0.6,
+        "fpr": 0.0589
+      },
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.2,
+          "epochs": 50,
+          "learning_rate": 0.003
+        },
+        "f1": 0.644,
+        "recall": 0.6,
+        "fpr": 0.0637
+      },
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.2,
+          "epochs": 100,
+          "learning_rate": 0.001
+        },
+        "f1": 0.6452,
+        "recall": 0.6,
+        "fpr": 0.0629
+      },
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.2,
+          "epochs": 100,
+          "learning_rate": 0.003
+        },
+        "f1": 0.6429,
+        "recall": 0.6,
+        "fpr": 0.0645
+      },
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.5,
+          "epochs": 50,
+          "learning_rate": 0.001
+        },
+        "f1": 0.6545,
+        "recall": 0.6,
+        "fpr": 0.0565
+      },
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.5,
+          "epochs": 50,
+          "learning_rate": 0.003
+        },
+        "f1": 0.644,
+        "recall": 0.6,
+        "fpr": 0.0637
+      },
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.5,
+          "epochs": 100,
+          "learning_rate": 0.001
+        },
+        "f1": 0.6475,
+        "recall": 0.6,
+        "fpr": 0.0613
+      },
+      {
+        "params": {
+          "channels": [
+            16,
+            32
+          ],
+          "dropout": 0.5,
+          "epochs": 100,
+          "learning_rate": 0.003
+        },
+        "f1": 0.6294,
+        "recall": 0.6,
+        "fpr": 0.0742
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.2,
+          "epochs": 50,
+          "learning_rate": 0.001
+        },
+        "f1": 0.6417,
+        "recall": 0.6,
+        "fpr": 0.0653
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.2,
+          "epochs": 50,
+          "learning_rate": 0.003
+        },
+        "f1": 0.6593,
+        "recall": 0.6,
+        "fpr": 0.0532
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.2,
+          "epochs": 100,
+          "learning_rate": 0.001
+        },
+        "f1": 0.644,
+        "recall": 0.6,
+        "fpr": 0.0637
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.2,
+          "epochs": 100,
+          "learning_rate": 0.003
+        },
+        "f1": 0.6383,
+        "recall": 0.6,
+        "fpr": 0.0677
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.5,
+          "epochs": 50,
+          "learning_rate": 0.001
+        },
+        "f1": 0.6569,
+        "recall": 0.6,
+        "fpr": 0.0548
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.5,
+          "epochs": 50,
+          "learning_rate": 0.003
+        },
+        "f1": 0.6534,
+        "recall": 0.6,
+        "fpr": 0.0573
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.5,
+          "epochs": 100,
+          "learning_rate": 0.001
+        },
+        "f1": 0.6618,
+        "recall": 0.6,
+        "fpr": 0.0516
+      },
+      {
+        "params": {
+          "channels": [
+            32,
+            64
+          ],
+          "dropout": 0.5,
+          "epochs": 100,
+          "learning_rate": 0.003
+        },
+        "f1": 0.6452,
+        "recall": 0.6,
+        "fpr": 0.0629
+      }
+    ]
+  },
+  "cnn_raw": {
+    "model": "cnn_raw",
+    "best_params": {
+      "dropout": 0.5,
+      "learning_rate": 0.003,
+      "max_len": 32768
+    },
+    "best_index": 6,
+    "inner_scheme": "GroupKFold(n_splits=3) on task_id, pooled out-of-fold F1",
+    "n_candidates": 8,
+    "default_f1": 0.1463,
+    "best_f1": 0.463,
+    "candidates": [
+      {
+        "params": {
+          "dropout": 0.2,
+          "learning_rate": 0.001,
+          "max_len": 32768
+        },
+        "f1": 0.1463,
+        "recall": 0.1,
+        "fpr": 0.0645
+      },
+      {
+        "params": {
+          "dropout": 0.2,
+          "learning_rate": 0.001,
+          "max_len": 8192
+        },
+        "f1": 0.3333,
+        "recall": 0.2,
+        "fpr": 0.0
+      },
+      {
+        "params": {
+          "dropout": 0.2,
+          "learning_rate": 0.003,
+          "max_len": 32768
+        },
+        "f1": 0.1402,
+        "recall": 0.1,
+        "fpr": 0.079
+      },
+      {
+        "params": {
+          "dropout": 0.2,
+          "learning_rate": 0.003,
+          "max_len": 8192
+        },
+        "f1": 0.2362,
+        "recall": 0.2,
+        "fpr": 0.1194
+      },
+      {
+        "params": {
+          "dropout": 0.5,
+          "learning_rate": 0.001,
+          "max_len": 32768
+        },
+        "f1": 0.1345,
+        "recall": 0.1,
+        "fpr": 0.0935
+      },
+      {
+        "params": {
+          "dropout": 0.5,
+          "learning_rate": 0.001,
+          "max_len": 8192
+        },
+        "f1": 0.2609,
+        "recall": 0.19,
+        "fpr": 0.0645
+      },
+      {
+        "params": {
+          "dropout": 0.5,
+          "learning_rate": 0.003,
+          "max_len": 32768
+        },
+        "f1": 0.463,
+        "recall": 0.5,
+        "fpr": 0.1597
+      },
+      {
+        "params": {
+          "dropout": 0.5,
+          "learning_rate": 0.003,
+          "max_len": 8192
+        },
+        "f1": 0.2158,
+        "recall": 0.15,
+        "fpr": 0.0581
+      }
+    ]
+  },
+  "rf_xgb": {
+    "model": "rf_xgb",
+    "best_params": {
+      "random_forest": {
+        "max_depth": null,
+        "max_features": 0.5,
+        "min_samples_leaf": 1,
+        "n_estimators": 300
+      },
+      "xgboost": {
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "n_estimators": 300,
+        "subsample": 1.0
+      }
+    },
+    "note": "no search of its own: built from its members' tuned settings"
+  }
+}

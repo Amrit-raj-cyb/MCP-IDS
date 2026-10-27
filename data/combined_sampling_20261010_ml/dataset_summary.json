@@ -1,0 +1,36 @@
+{
+  "dataset_path": "/lab/data/combined_sampling_20261010",
+  "dataset_sha256": "74a73e6f87f1ceaecf79d2757b4ec43387ef1f88144d672a1a43d730cb6afbad",
+  "generated_at": "2026-10-09T22:09:18+00:00",
+  "n_sessions": 1586,
+  "n_benign": 1226,
+  "n_attack": 360,
+  "attack_families": {
+    "poisoned_tool": 120,
+    "sampling_injection": 120,
+    "shadowing": 120
+  },
+  "attack_variants": {
+    "overt": 24,
+    "polite": 24,
+    "tagged": 24,
+    "padded": 24,
+    "param": 24,
+    "server_sampling_request": 120,
+    "duplicate_name_cross_reference": 120
+  },
+  "attack_succeeded": 213,
+  "n_features": 65,
+  "features_per_category": {
+    "structural": 26,
+    "behavioral": 19,
+    "content": 20
+  },
+  "n_wire_events": 37652,
+  "extractor_version": "1.0",
+  "lab_versions": {
+    "0.9.0": 1354,
+    "0.9.1": 232
+  },
+  "python": "3.12.15"
+}

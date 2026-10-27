@@ -1,0 +1,5 @@
+# 1-D CNN model (ml/cnn.py): CPU-only PyTorch from the official PyTorch index (no CUDA libraries).
+# Installed in a separate pip step after requirements.txt, so PyPI packages are never looked up here:
+#   pip install -r requirements.txt && pip install -r requirements-torch.txt
+--index-url https://download.pytorch.org/whl/cpu
+torch==2.13.0+cpu

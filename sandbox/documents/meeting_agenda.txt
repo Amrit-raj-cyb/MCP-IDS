@@ -1,0 +1,4 @@
+Agenda (synthetic)
+1. Review lab progress
+2. Discuss feature extraction ideas
+3. Plan next experiment

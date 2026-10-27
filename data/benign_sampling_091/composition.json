@@ -1,0 +1,56 @@
+{
+  "composed_at": "2026-10-09T21:50:46+00:00",
+  "sources": [
+    {
+      "path": "/lab/data/benign_sampling_091_v0",
+      "dataset_sha256": "428e6c160d5243c740b1d18cb5da24683a5c684d0eed9a2f4ba5548825bc50e6",
+      "n_sessions": 58,
+      "labels": {
+        "benign": 58
+      },
+      "attack_families": {},
+      "lab_versions": {
+        "0.9.1": 58
+      }
+    },
+    {
+      "path": "/lab/data/benign_sampling_091_v1",
+      "dataset_sha256": "41abb5ddc6e23f652ce56a7a7b4b8a7a9f15472c717f0bf92afc71c7c39aad04",
+      "n_sessions": 58,
+      "labels": {
+        "benign": 58
+      },
+      "attack_families": {},
+      "lab_versions": {
+        "0.9.1": 58
+      }
+    },
+    {
+      "path": "/lab/data/benign_sampling_091_v2",
+      "dataset_sha256": "04ec9f24c7755bcf41d51c0c59c6bf72f2cfbf37bdb598482caa471f7bc48cf8",
+      "n_sessions": 58,
+      "labels": {
+        "benign": 58
+      },
+      "attack_families": {},
+      "lab_versions": {
+        "0.9.1": 58
+      }
+    },
+    {
+      "path": "/lab/data/benign_sampling_091_v3",
+      "dataset_sha256": "c88cb015d4b9e1655fb050db2e4f825d08de8f45ee4189d0597b6777768ff4f9",
+      "n_sessions": 58,
+      "labels": {
+        "benign": 58
+      },
+      "attack_families": {},
+      "lab_versions": {
+        "0.9.1": 58
+      }
+    }
+  ],
+  "n_sessions": 232,
+  "dataset_sha256": "06370ebfd8e8b433cb53ca2a8567f2b181dbb96adf471bd63ae43422a63c7367",
+  "verify_problems": []
+}

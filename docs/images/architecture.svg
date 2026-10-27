@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3d4a5c"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b03a2e"/>
+    </marker>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .t  { font-size:16px; font-weight:700; fill:#1b2430; }
+      .s  { font-size:12.5px; fill:#33404f; }
+      .sm { font-size:11.5px; fill:#4a5768; }
+      .h  { font-size:19px; font-weight:700; fill:#0f2a4a; }
+      .ln { stroke:#3d4a5c; stroke-width:1.6; fill:none; }
+      .infra { fill:#e3ecfa; stroke:#2c5aa0; stroke-width:1.5; }
+      .ben   { fill:#ffffff; stroke:#2e8b57; stroke-width:1.5; }
+      .att   { fill:#ffffff; stroke:#b03a2e; stroke-width:1.5; }
+      .ml    { fill:#f1e6fb; stroke:#7d3cb5; stroke-width:1.5; }
+      .store { fill:#fdf6e3; stroke:#b7950b; stroke-width:1.5; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="#f7f9fc"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="1400" height="72" fill="#0f2a4a"/>
+  <text x="28" y="34" font-size="26" font-weight="700" fill="#ffffff">MCP-Based Intrusion Detection System — Architecture</text>
+  <text x="28" y="58" font-size="14" fill="#c9d7ea">Controlled research lab: generate benign + inert-attack MCP traffic, log every JSON-RPC message, learn to detect attack attempts</text>
+
+  <!-- ===================== HALF A: LAB ===================== -->
+  <rect x="20" y="88" width="1360" height="512" rx="12" fill="#ffffff" stroke="#9fb3cf" stroke-dasharray="6 4"/>
+  <text x="40" y="116" class="h">A · Data-Collection Lab</text>
+  <text x="290" y="116" class="sm">Docker · internal-only network · non-root · synthetic data only</text>
+
+  <!-- Orchestrator -->
+  <rect x="44" y="250" width="160" height="130" rx="10" class="infra" filter="url(#sh)"/>
+  <text x="124" y="278" class="t" text-anchor="middle">Orchestrator</text>
+  <text x="60" y="302" class="s">• picks scenario</text>
+  <text x="60" y="320" class="s">• creates session ID</text>
+  <text x="60" y="338" class="s">• starts servers</text>
+  <text x="60" y="356" class="s">• writes manifest</text>
+
+  <!-- Agent -->
+  <rect x="240" y="250" width="170" height="130" rx="10" class="infra" filter="url(#sh)"/>
+  <text x="325" y="278" class="t" text-anchor="middle">MCP Agent</text>
+  <text x="325" y="296" class="sm" text-anchor="middle">(LLM / mock + client)</text>
+  <text x="256" y="320" class="s">• MCP SDK, stdio</text>
+  <text x="256" y="338" class="s">• runs task</text>
+  <text x="256" y="356" class="s">• sampling handler</text>
+  <line x1="204" y1="315" x2="238" y2="315" class="ln" marker-end="url(#arr)"/>
+
+  <!-- Fan-out bus -->
+  <line x1="410" y1="315" x2="440" y2="315" class="ln"/>
+  <line x1="440" y1="178" x2="440" y2="523" class="ln"/>
+  <g class="ln" marker-end="url(#arr)">
+    <line x1="440" y1="178" x2="468" y2="178"/>
+    <line x1="440" y1="238" x2="468" y2="238"/>
+    <line x1="440" y1="298" x2="468" y2="298"/>
+    <line x1="440" y1="403" x2="468" y2="403"/>
+    <line x1="440" y1="463" x2="468" y2="463"/>
+    <line x1="440" y1="523" x2="468" y2="523"/>
+  </g>
+
+  <!-- Proxies -->
+  <g>
+    <rect x="470" y="158" width="130" height="40" rx="7" class="infra"/>
+    <rect x="470" y="218" width="130" height="40" rx="7" class="infra"/>
+    <rect x="470" y="278" width="130" height="40" rx="7" class="infra"/>
+    <rect x="470" y="383" width="130" height="40" rx="7" class="infra"/>
+    <rect x="470" y="443" width="130" height="40" rx="7" class="infra"/>
+    <rect x="470" y="503" width="130" height="40" rx="7" class="infra"/>
+  </g>
+  <g font-size="13" font-weight="600" fill="#1f3f73" text-anchor="middle">
+    <text x="535" y="183">Logging Proxy</text>
+    <text x="535" y="243">Logging Proxy</text>
+    <text x="535" y="303">Logging Proxy</text>
+    <text x="535" y="408">Logging Proxy</text>
+    <text x="535" y="468">Logging Proxy</text>
+    <text x="535" y="528">Logging Proxy</text>
+  </g>
+  <text x="535" y="568" class="sm" text-anchor="middle">one per server, shared</text>
+  <text x="535" y="584" class="sm" text-anchor="middle">MCP_SESSION_ID</text>
+
+  <g class="ln" marker-end="url(#arr)">
+    <line x1="600" y1="178" x2="656" y2="178"/>
+    <line x1="600" y1="238" x2="656" y2="238"/>
+    <line x1="600" y1="298" x2="656" y2="298"/>
+    <line x1="600" y1="403" x2="656" y2="403"/>
+    <line x1="600" y1="463" x2="656" y2="463"/>
+    <line x1="600" y1="523" x2="656" y2="523"/>
+  </g>
+
+  <!-- Benign group -->
+  <rect x="640" y="128" width="330" height="200" rx="10" fill="#e3f5ea" stroke="#2e8b57" stroke-dasharray="5 3"/>
+  <text x="805" y="148" font-size="13.5" font-weight="700" fill="#1e6b41" text-anchor="middle">BENIGN MCP SERVERS (real, working)</text>
+  <rect x="658" y="157" width="296" height="42" rx="7" class="ben"/>
+  <text x="672" y="176" class="t" font-size="14">Filesystem</text>
+  <text x="672" y="192" class="sm">read / write / list / search in sandbox/</text>
+  <rect x="658" y="217" width="296" height="42" rx="7" class="ben"/>
+  <text x="672" y="236" class="t" font-size="14">SQLite</text>
+  <text x="672" y="252" class="sm">query / insert on dummy.db</text>
+  <rect x="658" y="277" width="296" height="42" rx="7" class="ben"/>
+  <text x="672" y="296" class="t" font-size="14">Web Fetch</text>
+  <text x="672" y="312" class="sm">allow-listed local test pages only</text>
+
+  <!-- Attack group -->
+  <rect x="640" y="353" width="330" height="200" rx="10" fill="#fbe5e3" stroke="#b03a2e" stroke-dasharray="5 3"/>
+  <text x="805" y="373" font-size="13.5" font-weight="700" fill="#922b21" text-anchor="middle">ATTACK MCP SERVERS (inert simulations)</text>
+  <rect x="658" y="382" width="296" height="42" rx="7" class="att"/>
+  <text x="672" y="401" class="t" font-size="14">Poisoned Tool</text>
+  <text x="672" y="417" class="sm">injected text in tools/list description</text>
+  <rect x="658" y="442" width="296" height="42" rx="7" class="att"/>
+  <text x="672" y="461" class="t" font-size="14">Shadowing Tool</text>
+  <text x="672" y="477" class="sm">metadata targeting another server's tools</text>
+  <rect x="658" y="502" width="296" height="42" rx="7" class="att"/>
+  <text x="672" y="521" class="t" font-size="14">Sampling Injector</text>
+  <text x="672" y="537" class="sm">server → client sampling/createMessage</text>
+
+  <!-- Data stores -->
+  <rect x="1030" y="175" width="160" height="120" rx="10" class="store" filter="url(#sh)"/>
+  <text x="1110" y="203" class="t" text-anchor="middle">JSONL Logs</text>
+  <text x="1110" y="225" class="s" text-anchor="middle">one JSON-RPC</text>
+  <text x="1110" y="242" class="s" text-anchor="middle">message per line</text>
+  <text x="1110" y="268" class="sm" text-anchor="middle">data/raw/sessions/</text>
+
+  <rect x="1030" y="390" width="160" height="120" rx="10" class="store" filter="url(#sh)"/>
+  <text x="1110" y="418" class="t" text-anchor="middle">Manifest</text>
+  <text x="1110" y="440" class="s" text-anchor="middle">label · attack family</text>
+  <text x="1110" y="457" class="s" text-anchor="middle">attempted · succeeded</text>
+  <text x="1110" y="483" class="sm" text-anchor="middle">data/manifests/</text>
+
+  <!-- servers -> logs (written by proxies) -->
+  <path d="M970,228 L1028,228" class="ln" marker-end="url(#arr)"/>
+  <path d="M970,453 L1000,453 L1000,262 L1028,262" class="ln" marker-end="url(#arr)"/>
+  <text x="999" y="345" class="sm" text-anchor="middle" transform="rotate(-90 999 345)" dy="-6">logged by proxies</text>
+
+  <!-- orchestrator -> manifest -->
+  <path d="M124,380 L124,592 L1110,592 L1110,512" class="ln" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <text x="840" y="587" class="sm">labels per session</text>
+
+  <!-- Legend -->
+  <rect x="1214" y="128" width="150" height="190" rx="10" fill="#ffffff" stroke="#c8d3e3"/>
+  <text x="1230" y="152" font-size="13.5" font-weight="700" fill="#1b2430">Legend</text>
+  <rect x="1230" y="166" width="18" height="14" rx="3" class="infra"/><text x="1256" y="178" class="s">Infrastructure</text>
+  <rect x="1230" y="192" width="18" height="14" rx="3" fill="#e3f5ea" stroke="#2e8b57"/><text x="1256" y="204" class="s">Benign</text>
+  <rect x="1230" y="218" width="18" height="14" rx="3" fill="#fbe5e3" stroke="#b03a2e"/><text x="1256" y="230" class="s">Attack (inert)</text>
+  <rect x="1230" y="244" width="18" height="14" rx="3" class="store"/><text x="1256" y="256" class="s">Dataset</text>
+  <rect x="1230" y="270" width="18" height="14" rx="3" class="ml"/><text x="1256" y="282" class="s">Machine learning</text>
+  <text x="1230" y="305" class="sm">Transport: stdio</text>
+
+  <rect x="1214" y="336" width="150" height="174" rx="10" fill="#fff8f7" stroke="#e3b8b2"/>
+  <text x="1230" y="360" font-size="13.5" font-weight="700" fill="#922b21">Safety</text>
+  <text x="1230" y="382" class="sm">• localhost / Docker</text>
+  <text x="1230" y="400" class="sm">• no internet route</text>
+  <text x="1230" y="418" class="sm">• dummy data only</text>
+  <text x="1230" y="436" class="sm">• SIMULATION: payloads</text>
+  <text x="1230" y="454" class="sm">• harmless canaries</text>
+  <text x="1230" y="472" class="sm">• observe-only detector</text>
+  <text x="1230" y="490" class="sm">• no real credentials</text>
+
+  <!-- ===================== HALF B: ML ===================== -->
+  <rect x="20" y="620" width="1360" height="232" rx="12" fill="#ffffff" stroke="#c4a8e0" stroke-dasharray="6 4"/>
+  <text x="40" y="648" class="h">B · Machine Learning Pipeline</text>
+
+  <!-- dataset -> features -->
+  <path d="M1190,235 L1205,235 L1205,610 L165,610 L165,662" class="ln" stroke="#7d3cb5" marker-end="url(#arr)"/>
+  <path d="M1190,450 L1205,450" class="ln" stroke="#7d3cb5"/>
+  <text x="680" y="605" class="sm" fill="#7d3cb5" font-weight="600">logs + manifest  →  sessions</text>
+
+  <rect x="50" y="665" width="230" height="160" rx="10" class="ml" filter="url(#sh)"/>
+  <text x="165" y="692" class="t" text-anchor="middle">Feature Extraction</text>
+  <text x="66" y="718" class="s">• Structural: counts, sizes,</text>
+  <text x="80" y="735" class="s">methods, error rate</text>
+  <text x="66" y="757" class="s">• Behavioural: sequences,</text>
+  <text x="80" y="774" class="s">cross-server, directions</text>
+  <text x="66" y="796" class="s">• Content: description text</text>
+  <text x="80" y="813" class="s">(supplementary)</text>
+
+  <path d="M280,745 L310,745 L310,697 L338,697" class="ln" marker-end="url(#arr)"/>
+  <path d="M310,745 L310,793 L338,793" class="ln" marker-end="url(#arr)"/>
+
+  <rect x="340" y="665" width="200" height="64" rx="10" class="ml" filter="url(#sh)"/>
+  <text x="440" y="693" class="t" text-anchor="middle">Random Forest</text>
+  <text x="440" y="713" class="sm" text-anchor="middle">first model · interpretable</text>
+  <rect x="340" y="761" width="200" height="64" rx="10" class="ml" filter="url(#sh)"/>
+  <text x="440" y="789" class="t" text-anchor="middle">SVM</text>
+  <text x="440" y="809" class="sm" text-anchor="middle">scaled features · margin-based</text>
+
+  <path d="M540,697 L570,697 L570,745 L598,745" class="ln" marker-end="url(#arr)"/>
+  <path d="M540,793 L570,793 L570,745" class="ln"/>
+
+  <rect x="600" y="665" width="250" height="160" rx="10" class="ml" filter="url(#sh)"/>
+  <text x="725" y="692" class="t" text-anchor="middle">Evaluation</text>
+  <text x="616" y="718" class="s">• precision · recall · F1 · FPR</text>
+  <text x="616" y="738" class="s">• per-attack-family metrics</text>
+  <text x="616" y="758" class="s">• confusion matrix · latency</text>
+  <text x="616" y="782" class="s">• stratified split (baseline)</text>
+  <text x="616" y="802" class="s">• attack-family holdout</text>
+
+  <line x1="850" y1="745" x2="888" y2="745" class="ln" marker-end="url(#arr)"/>
+
+  <rect x="890" y="665" width="230" height="160" rx="10" class="ml" filter="url(#sh)"/>
+  <text x="1005" y="692" class="t" text-anchor="middle">Live Detector</text>
+  <text x="1005" y="710" class="sm" text-anchor="middle">(demo, final phase)</text>
+  <text x="906" y="736" class="s">• runs beside the proxy</text>
+  <text x="906" y="756" class="s">• observe → classify → alert</text>
+  <text x="906" y="776" class="s">• never blocks traffic</text>
+  <text x="906" y="800" class="sm" font-family="Consolas, monospace">{"alert": true, "conf": 0.91}</text>
+
+  <rect x="1150" y="665" width="214" height="160" rx="10" fill="#f7f9fc" stroke="#c8d3e3"/>
+  <text x="1166" y="690" font-size="13.5" font-weight="700" fill="#1b2430">Research principle</text>
+  <text x="1166" y="714" class="s">Detect attack <tspan font-weight="700">attempts</tspan>,</text>
+  <text x="1166" y="732" class="s">not only successes.</text>
+  <text x="1166" y="758" class="s">Traffic <tspan font-weight="700">structure &amp;</tspan></text>
+  <text x="1166" y="776" class="s"><tspan font-weight="700">behaviour</tspan> first; keyword</text>
+  <text x="1166" y="794" class="s">content only as a</text>
+  <text x="1166" y="812" class="s">supplementary feature.</text>
+
+  <text x="700" y="880" font-size="12" fill="#6b7787" text-anchor="middle">Academic research project · all components run locally in an isolated Docker lab · attack servers are inert simulations · no real systems, users or credentials</text>
+</svg>

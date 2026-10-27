@@ -1,0 +1,8 @@
+{
+  "dataset": "synthetic-sample",
+  "records": [
+    {"id": 1, "user": "alice_test", "action": "login"},
+    {"id": 2, "user": "bob_test", "action": "view_report"},
+    {"id": 3, "user": "carol_test", "action": "logout"}
+  ]
+}

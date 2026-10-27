@@ -1,0 +1,721 @@
+{
+  "created_at": "2026-10-07T19:09:51+00:00",
+  "features_dir": "/lab/data/expanded_20261006_holdout_original_ml",
+  "dataset_sha256": "12a010f1cdfbe55bae4ebd94dc425ad0f9543759ed7cd59ab432950d0d4dcf6a",
+  "n_sessions": 634,
+  "n_benign": 634,
+  "n_attack": 0,
+  "n_distinct_vectors": 601,
+  "models": [
+    {
+      "model": "phase9_expanded_20261006/random_forest",
+      "model_path": "/lab/models/phase9_expanded_20261006/random_forest.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.9953,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0047,
+        "confusion_matrix": {
+          "tn": 631,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0016,
+          0.0138
+        ],
+        "max_benign_score": 0.5667
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.0167
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.9951,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0049,
+        "confusion_matrix": {
+          "tn": 607,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0017,
+          0.0144
+        ],
+        "max_benign_score": 0.5667
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 29,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 287,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0132
+          ],
+          "max_benign_score": 0.4133
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.8966,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.1034,
+          "confusion_matrix": {
+            "tn": 26,
+            "fp": 3,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0358,
+            0.2639
+          ],
+          "max_benign_score": 0.5667
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.4133
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 317,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.012
+          ],
+          "max_benign_score": 0.17
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:multi_news_to_file": 2,
+        "benign:multi_web_db_prices": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261006/svm",
+      "model_path": "/lab/models/phase9_expanded_20261006/svm.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "SVM margin (>0 means attack)",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.5978,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.4022,
+        "confusion_matrix": {
+          "tn": 379,
+          "fp": 255,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3647,
+          0.4409
+        ],
+        "max_benign_score": 0.7812
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": -0.4788
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.582,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.418,
+        "confusion_matrix": {
+          "tn": 355,
+          "fp": 255,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3795,
+          0.4576
+        ],
+        "max_benign_score": 0.7812
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 29,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.4774,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.5226,
+          "confusion_matrix": {
+            "tn": 137,
+            "fp": 150,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4649,
+            0.5798
+          ],
+          "max_benign_score": 0.7812
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.6897,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.3103,
+          "confusion_matrix": {
+            "tn": 20,
+            "fp": 9,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.1728,
+            0.4923
+          ],
+          "max_benign_score": 0.7648
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 0.3969
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.7003,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.2997,
+          "confusion_matrix": {
+            "tn": 222,
+            "fp": 95,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2519,
+            0.3523
+          ],
+          "max_benign_score": 0.7812
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_report_digest": 20,
+        "benign:web_docs_tour": 16,
+        "benign:fs_report_digest:all_servers": 14,
+        "benign:fs_json_summary": 12,
+        "benign:db_recent_orders": 11,
+        "benign:db_recent_orders:all_servers": 10,
+        "benign:web_docs_tour:all_servers": 10,
+        "benign:db_low_stock": 9,
+        "benign:fs_write_todo": 8,
+        "benign:fs_search_reports": 8,
+        "benign:fs_search_reports:all_servers": 8,
+        "benign:fs_copy_notes": 8,
+        "benign:fs_json_summary:all_servers": 8,
+        "benign:web_products_list": 8,
+        "benign:multi_db_to_csv": 8,
+        "benign:db_error_logs": 7,
+        "benign:web_faq_long": 6,
+        "benign:web_faq_long:all_servers": 6,
+        "benign:db_error_logs:all_servers": 6,
+        "benign:web_about_team": 6,
+        "benign:multi_db_to_csv:all_servers": 6,
+        "benign:db_user_lookup": 5,
+        "benign:db_low_stock:all_servers": 5,
+        "benign:db_top_products": 4,
+        "benign:web_api_docs": 4,
+        "benign:web_products_list:all_servers": 4,
+        "benign:fs_find_data_files": 3,
+        "benign:db_user_lookup:all_servers": 3,
+        "benign:db_add_log": 3,
+        "benign:web_getting_started": 3,
+        "benign:fs_find_data_files:all_servers": 2,
+        "benign:db_top_products:all_servers": 2,
+        "benign:db_order_status": 2,
+        "benign:db_order_status:all_servers": 2,
+        "benign:db_new_order": 2,
+        "benign:web_news": 2,
+        "benign:calc_unit_report": 2,
+        "benign:calc_unit_report:all_servers": 2,
+        "benign:fs_explore_documents": 1,
+        "benign:fs_explore_documents:all_servers": 1,
+        "benign:db_add_log:all_servers": 1,
+        "benign:db_new_order:all_servers": 1,
+        "benign:web_api_docs:all_servers": 1,
+        "benign:multi_price_check": 1,
+        "benign:multi_price_check:all_servers": 1,
+        "benign:web_about_team:all_servers": 1,
+        "benign:multi_web_db_prices": 1,
+        "benign:multi_web_db_prices:all_servers": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261006/xgboost",
+      "model_path": "/lab/models/phase9_expanded_20261006/xgboost.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.9306,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0694,
+        "confusion_matrix": {
+          "tn": 590,
+          "fp": 44,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0521,
+          0.0919
+        ],
+        "max_benign_score": 0.9985
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.0109
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.9279,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0721,
+        "confusion_matrix": {
+          "tn": 566,
+          "fp": 44,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0542,
+          0.0954
+        ],
+        "max_benign_score": 0.9985
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 29,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.9547,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0453,
+          "confusion_matrix": {
+            "tn": 274,
+            "fp": 13,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0267,
+            0.0759
+          ],
+          "max_benign_score": 0.9326
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.5517,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.4483,
+          "confusion_matrix": {
+            "tn": 16,
+            "fp": 13,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2841,
+            0.6245
+          ],
+          "max_benign_score": 0.9985
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 0.9972
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.9464,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0536,
+          "confusion_matrix": {
+            "tn": 300,
+            "fp": 17,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0337,
+            0.0842
+          ],
+          "max_benign_score": 0.7335
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:web_faq_long": 6,
+        "benign:web_faq_long:all_servers": 6,
+        "benign:web_products_list": 4,
+        "benign:web_products_list:all_servers": 4,
+        "benign:multi_db_to_csv": 4,
+        "benign:multi_db_to_csv:all_servers": 4,
+        "benign:multi_news_growth": 4,
+        "benign:db_error_logs": 3,
+        "benign:db_error_logs:all_servers": 3,
+        "benign:multi_web_db_prices": 3,
+        "benign:multi_news_to_file": 2,
+        "benign:multi_price_check": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261006/rf_xgb",
+      "model_path": "/lab/models/phase9_expanded_20261006/rf_xgb.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.9574,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0426,
+        "confusion_matrix": {
+          "tn": 607,
+          "fp": 27,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0294,
+          0.0613
+        ],
+        "max_benign_score": 0.7823
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.0123
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.9557,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0443,
+        "confusion_matrix": {
+          "tn": 583,
+          "fp": 27,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0306,
+          0.0636
+        ],
+        "max_benign_score": 0.7823
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 29,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.9547,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0453,
+          "confusion_matrix": {
+            "tn": 274,
+            "fp": 13,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0267,
+            0.0759
+          ],
+          "max_benign_score": 0.596
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.5517,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.4483,
+          "confusion_matrix": {
+            "tn": 16,
+            "fp": 13,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2841,
+            0.6245
+          ],
+          "max_benign_score": 0.7823
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 0.7053
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 317,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.012
+          ],
+          "max_benign_score": 0.4368
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:web_faq_long": 6,
+        "benign:web_products_list": 4,
+        "benign:multi_db_to_csv": 4,
+        "benign:multi_news_growth": 4,
+        "benign:db_error_logs": 3,
+        "benign:multi_web_db_prices": 3,
+        "benign:multi_news_to_file": 2,
+        "benign:multi_price_check": 1
+      }
+    }
+  ]
+}

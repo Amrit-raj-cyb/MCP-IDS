@@ -1,0 +1,36 @@
+{
+  "dataset_path": "/lab/data/combined_canonical_20261010",
+  "dataset_sha256": "011239eb29cfd2353e191e5899e3bd4f9a86acfa610193708106114ea7d2e4d6",
+  "generated_at": "2026-10-10T12:21:07+00:00",
+  "n_sessions": 2220,
+  "n_benign": 1860,
+  "n_attack": 360,
+  "attack_families": {
+    "poisoned_tool": 120,
+    "sampling_injection": 120,
+    "shadowing": 120
+  },
+  "attack_variants": {
+    "overt": 24,
+    "polite": 24,
+    "tagged": 24,
+    "padded": 24,
+    "param": 24,
+    "server_sampling_request": 120,
+    "duplicate_name_cross_reference": 120
+  },
+  "attack_succeeded": 213,
+  "n_features": 65,
+  "features_per_category": {
+    "structural": 26,
+    "behavioral": 19,
+    "content": 20
+  },
+  "n_wire_events": 52162,
+  "extractor_version": "1.0",
+  "lab_versions": {
+    "0.9.0": 1988,
+    "0.9.1": 232
+  },
+  "python": "3.12.15"
+}

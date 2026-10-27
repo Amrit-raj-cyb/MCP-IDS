@@ -1,0 +1,35 @@
+{
+  "dataset_path": "/lab/data/phase9_081_targeted",
+  "dataset_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+  "generated_at": "2026-10-05T22:05:36+00:00",
+  "n_sessions": 180,
+  "n_benign": 90,
+  "n_attack": 90,
+  "attack_families": {
+    "poisoned_tool": 30,
+    "sampling_injection": 30,
+    "shadowing": 30
+  },
+  "attack_variants": {
+    "overt": 6,
+    "polite": 6,
+    "tagged": 6,
+    "param": 6,
+    "padded": 6,
+    "server_sampling_request": 30,
+    "duplicate_name_cross_reference": 30
+  },
+  "attack_succeeded": 49,
+  "n_features": 65,
+  "features_per_category": {
+    "structural": 26,
+    "behavioral": 19,
+    "content": 20
+  },
+  "n_wire_events": 4222,
+  "extractor_version": "1.0",
+  "lab_versions": {
+    "0.8.1": 180
+  },
+  "python": "3.12.15"
+}

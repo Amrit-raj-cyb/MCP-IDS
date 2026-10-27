@@ -1,0 +1,71 @@
+{
+  "experiment_id": "exp_002_try6_run_20261004",
+  "dataset": {
+    "dataset_path": "C:\\Projects\\IDS\\data\\try6",
+    "dataset_sha256": "0784a0f970421d70878938ac3cb6a4d62e1698ac63be75c761100114ccac7337",
+    "n_sessions": 65,
+    "n_benign": 40,
+    "n_attack": 25,
+    "attack_families": {
+      "poisoned_tool": 25
+    },
+    "attack_variants": {
+      "param": 5,
+      "overt": 5,
+      "tagged": 5,
+      "polite": 5,
+      "padded": 5
+    },
+    "attack_succeeded": 11
+  },
+  "feature_dir": "data\\try6_ml_run_20261004",
+  "model_dir": "models\\try6_run_20261004",
+  "results_dir": "results\\try6_run_20261004",
+  "split": {
+    "seed": 42,
+    "test_size": 0.3,
+    "stratified_on": "label",
+    "n_train": 45,
+    "n_test": 20,
+    "train_benign": 28,
+    "train_attack": 17,
+    "test_benign": 12,
+    "test_attack": 8
+  },
+  "models": {
+    "random_forest": {
+      "params": {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "class_weight": "balanced",
+        "n_jobs": 1
+      },
+      "pipeline_steps": [
+        "impute",
+        "model"
+      ]
+    },
+    "svm": {
+      "params": {
+        "kernel": "rbf",
+        "C": 1.0,
+        "gamma": "scale",
+        "class_weight": "balanced"
+      },
+      "pipeline_steps": [
+        "impute",
+        "scale",
+        "model"
+      ]
+    }
+  },
+  "n_features": 62,
+  "versions": {
+    "python": "3.12.6",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0"
+  }
+}

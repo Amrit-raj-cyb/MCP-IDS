@@ -1,0 +1,14 @@
+[project]
+name = "mcp-ids"
+version = "0.1.0"
+description = "MCP-based Intrusion Detection System - academic research lab"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+pythonpath = ["."]
+# Keep temp dirs (incl. lab logs) of FAILED tests only, so intermittent failures can be diagnosed.
+tmp_path_retention_policy = "failed"
+tmp_path_retention_count = 5

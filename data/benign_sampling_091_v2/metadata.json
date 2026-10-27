@@ -1,0 +1,29 @@
+{
+  "dataset_sha256": "8ebe83cd39e096250f929b4c08928f9ac311d2b4070a51c0377791b631ef9b3f",
+  "dataset_tag": "benign_unique",
+  "description_variants": {
+    "2": 58
+  },
+  "distinct_plans_per_task": {
+    "assist_summarize_text": 3,
+    "assist_translate_notes": 8,
+    "helpdesk_order_reply": 6,
+    "helpdesk_triage_ticket": 12
+  },
+  "lab_versions": {
+    "0.9.1": 58
+  },
+  "labels": {
+    "benign": 58
+  },
+  "n_ok": 58,
+  "n_scenarios": 8,
+  "n_sessions": 58,
+  "n_tasks": 4,
+  "servers_per_session": {
+    "1": 15,
+    "2": 14,
+    "7": 29
+  },
+  "verify_problems": []
+}

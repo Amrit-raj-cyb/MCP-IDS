@@ -1,0 +1,1005 @@
+{
+  "created_at": "2026-10-09T18:00:49+00:00",
+  "features_dir": "data/benign_unique_081_ml",
+  "dataset_sha256": "b0118a9fe336525705ca7178616443e11f77611d9f078f29911d54104e0df8ba",
+  "n_sessions": 200,
+  "n_benign": 200,
+  "n_attack": 0,
+  "n_distinct_vectors": 197,
+  "models": [
+    {
+      "model": "phase9_081_20261009/random_forest",
+      "model_path": "models/phase9_081_20261009/random_forest.joblib",
+      "trained_on_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 200,
+        "n_benign": 200,
+        "n_attack": 0,
+        "accuracy": 0.995,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.005,
+        "confusion_matrix": {
+          "tn": 199,
+          "fp": 1,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0009,
+          0.0278
+        ],
+        "max_benign_score": 0.53
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.0867
+      },
+      "task_not_seen_in_training": {
+        "n": 176,
+        "n_benign": 176,
+        "n_attack": 0,
+        "accuracy": 0.9943,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0057,
+        "confusion_matrix": {
+          "tn": 175,
+          "fp": 1,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.001,
+          0.0315
+        ],
+        "max_benign_score": 0.53
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 19,
+      "by_n_servers": {
+        "1": {
+          "n": 89,
+          "n_benign": 89,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0414
+          ],
+          "max_benign_score": 0.39
+        },
+        "2": {
+          "n": 10,
+          "n_benign": 10,
+          "n_attack": 0,
+          "accuracy": 0.9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.1,
+          "confusion_matrix": {
+            "tn": 9,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0179,
+            0.4042
+          ],
+          "max_benign_score": 0.53
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.3933
+        },
+        "6": {
+          "n": 100,
+          "n_benign": 100,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 100,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.037
+          ],
+          "max_benign_score": 0.1567
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:multi_news_to_file": 1
+      }
+    },
+    {
+      "model": "phase9_081_20261009/svm",
+      "model_path": "models/phase9_081_20261009/svm.joblib",
+      "trained_on_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+      "n_features": 65,
+      "score_kind": "SVM margin (>0 means attack)",
+      "all": {
+        "n": 200,
+        "n_benign": 200,
+        "n_attack": 0,
+        "accuracy": 0.535,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.465,
+        "confusion_matrix": {
+          "tn": 107,
+          "fp": 93,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3972,
+          0.5341
+        ],
+        "max_benign_score": 0.7539
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": -0.301
+      },
+      "task_not_seen_in_training": {
+        "n": 176,
+        "n_benign": 176,
+        "n_attack": 0,
+        "accuracy": 0.4716,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5284,
+        "confusion_matrix": {
+          "tn": 83,
+          "fp": 93,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.4548,
+          0.6008
+        ],
+        "max_benign_score": 0.7539
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 19,
+      "by_n_servers": {
+        "1": {
+          "n": 89,
+          "n_benign": 89,
+          "n_attack": 0,
+          "accuracy": 0.3146,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6854,
+          "confusion_matrix": {
+            "tn": 28,
+            "fp": 61,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.583,
+            0.7725
+          ],
+          "max_benign_score": 0.7539
+        },
+        "2": {
+          "n": 10,
+          "n_benign": 10,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 10,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.2775
+          ],
+          "max_benign_score": -0.1957
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 0.3636
+        },
+        "6": {
+          "n": 100,
+          "n_benign": 100,
+          "n_attack": 0,
+          "accuracy": 0.69,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.31,
+          "confusion_matrix": {
+            "tn": 69,
+            "fp": 31,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2278,
+            0.4063
+          ],
+          "max_benign_score": 0.7539
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_report_digest": 21,
+        "benign:fs_report_digest:all_servers": 14,
+        "benign:fs_find_data_files": 6,
+        "benign:web_faq_long": 6,
+        "benign:web_faq_long:all_servers": 6,
+        "benign:db_user_lookup": 5,
+        "benign:db_top_products": 4,
+        "benign:web_api_docs": 4,
+        "benign:fs_explore_documents": 3,
+        "benign:web_getting_started": 3,
+        "benign:fs_find_data_files:all_servers": 2,
+        "benign:db_order_status": 2,
+        "benign:db_order_status:all_servers": 2,
+        "benign:db_user_lookup:all_servers": 2,
+        "benign:db_add_log": 2,
+        "benign:db_new_order": 2,
+        "benign:web_news": 2,
+        "benign:fs_summarize_notes": 1,
+        "benign:fs_explore_documents:all_servers": 1,
+        "benign:db_top_products:all_servers": 1,
+        "benign:db_add_log:all_servers": 1,
+        "benign:db_new_order:all_servers": 1,
+        "benign:multi_price_check": 1,
+        "benign:multi_price_check:all_servers": 1
+      }
+    },
+    {
+      "model": "phase9_081_20261009/xgboost",
+      "model_path": "models/phase9_081_20261009/xgboost.joblib",
+      "trained_on_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 200,
+        "n_benign": 200,
+        "n_attack": 0,
+        "accuracy": 0.985,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.015,
+        "confusion_matrix": {
+          "tn": 197,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0051,
+          0.0432
+        ],
+        "max_benign_score": 0.99
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.1303
+      },
+      "task_not_seen_in_training": {
+        "n": 176,
+        "n_benign": 176,
+        "n_attack": 0,
+        "accuracy": 0.983,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.017,
+        "confusion_matrix": {
+          "tn": 173,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0058,
+          0.0489
+        ],
+        "max_benign_score": 0.99
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 19,
+      "by_n_servers": {
+        "1": {
+          "n": 89,
+          "n_benign": 89,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0414
+          ],
+          "max_benign_score": 0.3711
+        },
+        "2": {
+          "n": 10,
+          "n_benign": 10,
+          "n_attack": 0,
+          "accuracy": 0.8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.2,
+          "confusion_matrix": {
+            "tn": 8,
+            "fp": 2,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0567,
+            0.5098
+          ],
+          "max_benign_score": 0.99
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 0.986
+        },
+        "6": {
+          "n": 100,
+          "n_benign": 100,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 100,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.037
+          ],
+          "max_benign_score": 0.0447
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:multi_news_to_file": 2,
+        "benign:multi_price_check": 1
+      }
+    },
+    {
+      "model": "phase9_081_20261009/rf_xgb",
+      "model_path": "models/phase9_081_20261009/rf_xgb.joblib",
+      "trained_on_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 200,
+        "n_benign": 200,
+        "n_attack": 0,
+        "accuracy": 0.985,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.015,
+        "confusion_matrix": {
+          "tn": 197,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0051,
+          0.0432
+        ],
+        "max_benign_score": 0.76
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.1085
+      },
+      "task_not_seen_in_training": {
+        "n": 176,
+        "n_benign": 176,
+        "n_attack": 0,
+        "accuracy": 0.983,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.017,
+        "confusion_matrix": {
+          "tn": 173,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0058,
+          0.0489
+        ],
+        "max_benign_score": 0.76
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 19,
+      "by_n_servers": {
+        "1": {
+          "n": 89,
+          "n_benign": 89,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0414
+          ],
+          "max_benign_score": 0.2322
+        },
+        "2": {
+          "n": 10,
+          "n_benign": 10,
+          "n_attack": 0,
+          "accuracy": 0.8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.2,
+          "confusion_matrix": {
+            "tn": 8,
+            "fp": 2,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0567,
+            0.5098
+          ],
+          "max_benign_score": 0.76
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 0.6896
+        },
+        "6": {
+          "n": 100,
+          "n_benign": 100,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 100,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.037
+          ],
+          "max_benign_score": 0.0851
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:multi_news_to_file": 2,
+        "benign:multi_price_check": 1
+      }
+    },
+    {
+      "model": "phase9_081_20261009/decision_tree",
+      "model_path": "models/phase9_081_20261009/decision_tree.joblib",
+      "trained_on_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 200,
+        "n_benign": 200,
+        "n_attack": 0,
+        "accuracy": 0.985,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.015,
+        "confusion_matrix": {
+          "tn": 197,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0051,
+          0.0432
+        ],
+        "max_benign_score": 1.0
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.0
+      },
+      "task_not_seen_in_training": {
+        "n": 176,
+        "n_benign": 176,
+        "n_attack": 0,
+        "accuracy": 0.983,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.017,
+        "confusion_matrix": {
+          "tn": 173,
+          "fp": 3,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0058,
+          0.0489
+        ],
+        "max_benign_score": 1.0
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 19,
+      "by_n_servers": {
+        "1": {
+          "n": 89,
+          "n_benign": 89,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0414
+          ],
+          "max_benign_score": 0.0
+        },
+        "2": {
+          "n": 10,
+          "n_benign": 10,
+          "n_attack": 0,
+          "accuracy": 0.8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.2,
+          "confusion_matrix": {
+            "tn": 8,
+            "fp": 2,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0567,
+            0.5098
+          ],
+          "max_benign_score": 1.0
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 1.0
+        },
+        "6": {
+          "n": 100,
+          "n_benign": 100,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 100,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.037
+          ],
+          "max_benign_score": 0.0
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:multi_news_to_file": 2,
+        "benign:multi_price_check": 1
+      }
+    },
+    {
+      "model": "phase9_081_20261009/cnn",
+      "model_path": "models/phase9_081_20261009/cnn.joblib",
+      "trained_on_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 200,
+        "n_benign": 200,
+        "n_attack": 0,
+        "accuracy": 0.965,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.035,
+        "confusion_matrix": {
+          "tn": 193,
+          "fp": 7,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0171,
+          0.0705
+        ],
+        "max_benign_score": 0.9894
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 24,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.138
+        ],
+        "max_benign_score": 0.0046
+      },
+      "task_not_seen_in_training": {
+        "n": 176,
+        "n_benign": 176,
+        "n_attack": 0,
+        "accuracy": 0.9602,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0398,
+        "confusion_matrix": {
+          "tn": 169,
+          "fp": 7,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0194,
+          0.0798
+        ],
+        "max_benign_score": 0.9894
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 19,
+      "by_n_servers": {
+        "1": {
+          "n": 89,
+          "n_benign": 89,
+          "n_attack": 0,
+          "accuracy": 0.9213,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0787,
+          "confusion_matrix": {
+            "tn": 82,
+            "fp": 7,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0386,
+            0.1536
+          ],
+          "max_benign_score": 0.9894
+        },
+        "2": {
+          "n": 10,
+          "n_benign": 10,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 10,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.2775
+          ],
+          "max_benign_score": 0.0023
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.0
+        },
+        "6": {
+          "n": 100,
+          "n_benign": 100,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 100,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.037
+          ],
+          "max_benign_score": 0.0333
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_report_digest": 4,
+        "benign:fs_find_data_files": 2,
+        "benign:fs_explore_documents": 1
+      }
+    }
+  ]
+}

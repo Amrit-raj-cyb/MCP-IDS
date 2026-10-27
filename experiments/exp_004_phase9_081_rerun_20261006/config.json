@@ -1,0 +1,75 @@
+{
+  "experiment_id": "exp_004_phase9_081_rerun_20261006",
+  "dataset": {
+    "dataset_path": "/lab/data/phase9_081_targeted",
+    "dataset_sha256": "f0fd05d28c873b61e59507dbb94cde3309bdd49007806c7cdfe46bfb4415728e",
+    "n_sessions": 180,
+    "n_benign": 90,
+    "n_attack": 90,
+    "attack_families": {
+      "poisoned_tool": 30,
+      "sampling_injection": 30,
+      "shadowing": 30
+    },
+    "attack_variants": {
+      "overt": 6,
+      "polite": 6,
+      "tagged": 6,
+      "param": 6,
+      "padded": 6,
+      "server_sampling_request": 30,
+      "duplicate_name_cross_reference": 30
+    },
+    "attack_succeeded": 49
+  },
+  "feature_dir": "/lab/data/phase9_081_ml_rerun_20261006",
+  "model_dir": "/lab/models/phase9_081_rerun_20261006",
+  "results_dir": "/lab/results/phase9_081_rerun_20261006",
+  "split": {
+    "seed": 42,
+    "test_size": 0.3,
+    "stratified_on": "label+attack_family",
+    "n_train": 126,
+    "n_test": 54,
+    "train_benign": 63,
+    "train_attack": 63,
+    "test_benign": 27,
+    "test_attack": 27
+  },
+  "models": {
+    "random_forest": {
+      "params": {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "class_weight": "balanced",
+        "n_jobs": 1
+      },
+      "pipeline_steps": [
+        "impute",
+        "model"
+      ]
+    },
+    "svm": {
+      "params": {
+        "kernel": "rbf",
+        "C": 1.0,
+        "gamma": "scale",
+        "class_weight": "balanced"
+      },
+      "pipeline_steps": [
+        "impute",
+        "scale",
+        "model"
+      ]
+    }
+  },
+  "n_features": 65,
+  "versions": {
+    "python": "3.12.15",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0"
+  }
+}

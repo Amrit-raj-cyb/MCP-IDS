@@ -1,0 +1,26 @@
+{
+  "dataset_tag": "phase9",
+  "generated_at_utc": "2026-10-03T17:59:19+00:00",
+  "llm": "mock",
+  "mock_susceptibility": 0.35,
+  "pairing": "one task-sized benign scenario and one matched attack twin where available; balanced labels",
+  "parallel": 2,
+  "repeats": 1,
+  "scenario_count": 12,
+  "scenario_ids": [
+    "benign:calc_add",
+    "attack:poisoned_tool:calc_add",
+    "benign:calc_temperature",
+    "attack:poisoned_tool:calc_temperature",
+    "benign:fs_sampling_probe",
+    "attack:sampling_injection:fs_sampling_probe",
+    "benign:fs_shadowing_probe",
+    "attack:shadowing:fs_shadowing_probe",
+    "benign:multi_order_share",
+    "attack:poisoned_tool:multi_order_share",
+    "benign:multi_region_share",
+    "attack:poisoned_tool:multi_region_share"
+  ],
+  "seed": 9000,
+  "source_datasets_modified": []
+}

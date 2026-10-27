@@ -1,0 +1,4 @@
+Lab notes (synthetic data)
+- Weekly sync moved to Thursday.
+- Remember to regenerate the sample dataset after schema changes.
+- All data in this sandbox is fake and exists only for the MCP-IDS lab.

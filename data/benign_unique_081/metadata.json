@@ -1,0 +1,45 @@
+{
+  "dataset_sha256": "ba509fb36cbed6c589f3c0dbd89a1ad76e1f0082026715d0c5270114afb29a70",
+  "dataset_tag": "benign_unique",
+  "distinct_plans_per_task": {
+    "calc_add": 2,
+    "calc_temperature": 4,
+    "db_add_log": 4,
+    "db_new_order": 4,
+    "db_order_status": 4,
+    "db_top_products": 8,
+    "db_user_lookup": 8,
+    "fs_explore_documents": 4,
+    "fs_find_data_files": 8,
+    "fs_report_digest": 24,
+    "fs_sampling_probe": 1,
+    "fs_shadowing_probe": 1,
+    "fs_summarize_notes": 4,
+    "multi_db_report": 2,
+    "multi_news_to_file": 2,
+    "multi_order_share": 2,
+    "multi_price_check": 1,
+    "multi_region_share": 2,
+    "web_api_docs": 4,
+    "web_faq_long": 6,
+    "web_getting_started": 3,
+    "web_news": 2
+  },
+  "lab_versions": {
+    "0.8.1": 200
+  },
+  "labels": {
+    "benign": 200
+  },
+  "n_ok": 200,
+  "n_scenarios": 44,
+  "n_sessions": 200,
+  "n_tasks": 22,
+  "servers_per_session": {
+    "1": 89,
+    "2": 10,
+    "3": 1,
+    "6": 100
+  },
+  "verify_problems": []
+}

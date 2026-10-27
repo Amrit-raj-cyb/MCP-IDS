@@ -1,0 +1,1357 @@
+{
+  "created_at": "2026-10-09T18:01:11+00:00",
+  "features_dir": "data/benign_varied_090_expanded_20261006_ml",
+  "dataset_sha256": "6a7f1017624df668261e650903a9b231d8c39d72946ca78caabe662de7d3b6c8",
+  "n_sessions": 634,
+  "n_benign": 634,
+  "n_attack": 0,
+  "n_distinct_vectors": 614,
+  "models": [
+    {
+      "model": "phase9_expanded_20261009/random_forest",
+      "model_path": "models/phase9_expanded_20261009/random_forest.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.3754,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.6246,
+        "confusion_matrix": {
+          "tn": 238,
+          "fp": 396,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5863,
+          0.6614
+        ],
+        "max_benign_score": 0.9633
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 0.4583,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5417,
+        "confusion_matrix": {
+          "tn": 11,
+          "fp": 13,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3507,
+          0.7211
+        ],
+        "max_benign_score": 0.9633
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.3721,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.6279,
+        "confusion_matrix": {
+          "tn": 227,
+          "fp": 383,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5888,
+          0.6653
+        ],
+        "max_benign_score": 0.96
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 8,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.4355,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.5645,
+          "confusion_matrix": {
+            "tn": 125,
+            "fp": 162,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.5066,
+            0.6206
+          ],
+          "max_benign_score": 0.78
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.3793,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6207,
+          "confusion_matrix": {
+            "tn": 11,
+            "fp": 18,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.44,
+            0.7731
+          ],
+          "max_benign_score": 0.9133
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.1233
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.3186,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6814,
+          "confusion_matrix": {
+            "tn": 101,
+            "fp": 216,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.6282,
+            0.7302
+          ],
+          "max_benign_score": 0.9633
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_search_reports": 32,
+        "benign:fs_search_reports:all_servers": 32,
+        "benign:fs_write_todo": 18,
+        "benign:fs_write_todo:all_servers": 18,
+        "benign:fs_report_digest": 16,
+        "benign:fs_report_digest:all_servers": 16,
+        "benign:fs_json_summary": 11,
+        "benign:db_low_stock": 11,
+        "benign:db_low_stock:all_servers": 11,
+        "benign:web_docs_tour:all_servers": 11,
+        "benign:calc_unit_report:all_servers": 11,
+        "benign:fs_json_summary:all_servers": 10,
+        "benign:fs_copy_notes": 8,
+        "benign:fs_copy_notes:all_servers": 8,
+        "benign:db_country_counts": 8,
+        "benign:db_country_counts:all_servers": 8,
+        "benign:db_recent_orders": 8,
+        "benign:db_recent_orders:all_servers": 8,
+        "benign:fs_find_data_files:all_servers": 6,
+        "benign:db_top_products:all_servers": 6,
+        "benign:db_user_lookup:all_servers": 6,
+        "benign:db_error_logs": 6,
+        "benign:db_error_logs:all_servers": 6,
+        "benign:multi_db_to_csv:all_servers": 6,
+        "benign:fs_find_data_files": 5,
+        "benign:db_top_products": 5,
+        "benign:db_user_lookup": 5,
+        "benign:web_products_list:all_servers": 5,
+        "benign:web_docs_tour": 5,
+        "benign:multi_db_to_csv": 5,
+        "benign:web_faq_long": 4,
+        "benign:web_faq_long:all_servers": 4,
+        "benign:web_about_team:all_servers": 4,
+        "benign:fs_summarize_notes:all_servers": 3,
+        "benign:fs_explore_documents:all_servers": 3,
+        "benign:db_order_status:all_servers": 3,
+        "benign:db_add_log:all_servers": 3,
+        "benign:db_new_order": 3,
+        "benign:calc_temperature:all_servers": 3,
+        "benign:web_products_list": 3,
+        "benign:multi_news_growth:all_servers": 3,
+        "benign:multi_notes_to_log": 3,
+        "benign:fs_summarize_notes": 2,
+        "benign:fs_explore_documents": 2,
+        "benign:db_order_status": 2,
+        "benign:db_add_log": 2,
+        "benign:db_new_order:all_servers": 2,
+        "benign:web_getting_started:all_servers": 2,
+        "benign:web_api_docs": 2,
+        "benign:web_api_docs:all_servers": 2,
+        "benign:multi_news_to_file": 2,
+        "benign:multi_db_report:all_servers": 2,
+        "benign:calc_add:all_servers": 2,
+        "benign:multi_order_share:all_servers": 2,
+        "benign:web_about_team": 2,
+        "benign:multi_web_db_prices": 2,
+        "benign:multi_web_db_prices:all_servers": 2,
+        "benign:multi_news_growth": 2,
+        "benign:multi_notes_to_log:all_servers": 2,
+        "benign:web_getting_started": 1,
+        "benign:web_news": 1,
+        "benign:web_news:all_servers": 1,
+        "benign:multi_db_report": 1,
+        "benign:multi_news_to_file:all_servers": 1,
+        "benign:multi_price_check:all_servers": 1,
+        "benign:multi_order_share": 1,
+        "benign:multi_region_share": 1,
+        "benign:fs_shadowing_probe": 1,
+        "benign:multi_region_share:all_servers": 1,
+        "benign:fs_shadowing_probe:all_servers": 1,
+        "benign:fs_sampling_probe:all_servers": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261009/svm",
+      "model_path": "models/phase9_expanded_20261009/svm.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "SVM margin (>0 means attack)",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.2177,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.7823,
+        "confusion_matrix": {
+          "tn": 138,
+          "fp": 496,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.7486,
+          0.8127
+        ],
+        "max_benign_score": 1.1458
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 0.4583,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5417,
+        "confusion_matrix": {
+          "tn": 11,
+          "fp": 13,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3507,
+          0.7211
+        ],
+        "max_benign_score": 1.1255
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.2082,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.7918,
+        "confusion_matrix": {
+          "tn": 127,
+          "fp": 483,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.7578,
+          0.8221
+        ],
+        "max_benign_score": 1.1458
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 8,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.2021,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.7979,
+          "confusion_matrix": {
+            "tn": 58,
+            "fp": 229,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.7477,
+            0.8403
+          ],
+          "max_benign_score": 0.9655
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.2759,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.7241,
+          "confusion_matrix": {
+            "tn": 8,
+            "fp": 21,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.5428,
+            0.853
+          ],
+          "max_benign_score": 0.9954
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 1.0,
+          "confusion_matrix": {
+            "tn": 0,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2065,
+            1.0
+          ],
+          "max_benign_score": 0.3375
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.2271,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.7729,
+          "confusion_matrix": {
+            "tn": 72,
+            "fp": 245,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.7236,
+            0.8156
+          ],
+          "max_benign_score": 1.1458
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_search_reports": 37,
+        "benign:fs_search_reports:all_servers": 36,
+        "benign:fs_report_digest": 23,
+        "benign:fs_report_digest:all_servers": 21,
+        "benign:fs_write_todo": 21,
+        "benign:fs_write_todo:all_servers": 18,
+        "benign:web_docs_tour": 16,
+        "benign:fs_json_summary": 15,
+        "benign:db_low_stock": 13,
+        "benign:web_docs_tour:all_servers": 13,
+        "benign:fs_json_summary:all_servers": 12,
+        "benign:db_low_stock:all_servers": 12,
+        "benign:db_recent_orders": 12,
+        "benign:fs_copy_notes": 11,
+        "benign:db_recent_orders:all_servers": 11,
+        "benign:calc_unit_report:all_servers": 11,
+        "benign:db_error_logs": 9,
+        "benign:db_error_logs:all_servers": 9,
+        "benign:fs_copy_notes:all_servers": 8,
+        "benign:db_country_counts": 8,
+        "benign:db_country_counts:all_servers": 8,
+        "benign:web_products_list": 8,
+        "benign:multi_db_to_csv": 8,
+        "benign:multi_db_to_csv:all_servers": 8,
+        "benign:fs_find_data_files": 7,
+        "benign:db_top_products": 7,
+        "benign:db_user_lookup:all_servers": 7,
+        "benign:fs_find_data_files:all_servers": 6,
+        "benign:db_top_products:all_servers": 6,
+        "benign:db_user_lookup": 6,
+        "benign:web_faq_long": 6,
+        "benign:web_faq_long:all_servers": 6,
+        "benign:web_about_team": 6,
+        "benign:web_products_list:all_servers": 6,
+        "benign:fs_explore_documents:all_servers": 4,
+        "benign:web_api_docs": 4,
+        "benign:web_about_team:all_servers": 4,
+        "benign:fs_summarize_notes:all_servers": 3,
+        "benign:db_order_status": 3,
+        "benign:db_order_status:all_servers": 3,
+        "benign:db_add_log": 3,
+        "benign:db_add_log:all_servers": 3,
+        "benign:db_new_order": 3,
+        "benign:db_new_order:all_servers": 3,
+        "benign:web_getting_started": 3,
+        "benign:web_api_docs:all_servers": 3,
+        "benign:calc_temperature:all_servers": 3,
+        "benign:multi_web_db_prices": 3,
+        "benign:multi_news_growth:all_servers": 3,
+        "benign:multi_notes_to_log": 3,
+        "benign:fs_summarize_notes": 2,
+        "benign:fs_explore_documents": 2,
+        "benign:web_news": 2,
+        "benign:web_getting_started:all_servers": 2,
+        "benign:multi_news_to_file": 2,
+        "benign:multi_db_report:all_servers": 2,
+        "benign:calc_add:all_servers": 2,
+        "benign:multi_order_share:all_servers": 2,
+        "benign:calc_unit_report": 2,
+        "benign:multi_web_db_prices:all_servers": 2,
+        "benign:multi_notes_to_log:all_servers": 2,
+        "benign:web_news:all_servers": 1,
+        "benign:multi_db_report": 1,
+        "benign:multi_news_to_file:all_servers": 1,
+        "benign:multi_price_check": 1,
+        "benign:multi_price_check:all_servers": 1,
+        "benign:multi_order_share": 1,
+        "benign:multi_region_share": 1,
+        "benign:fs_shadowing_probe": 1,
+        "benign:multi_region_share:all_servers": 1,
+        "benign:fs_shadowing_probe:all_servers": 1,
+        "benign:fs_sampling_probe:all_servers": 1,
+        "benign:multi_news_growth": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261009/xgboost",
+      "model_path": "models/phase9_expanded_20261009/xgboost.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.377,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.623,
+        "confusion_matrix": {
+          "tn": 239,
+          "fp": 395,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5847,
+          0.6599
+        ],
+        "max_benign_score": 0.9975
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 0.4583,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5417,
+        "confusion_matrix": {
+          "tn": 11,
+          "fp": 13,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3507,
+          0.7211
+        ],
+        "max_benign_score": 0.9964
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.3738,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.6262,
+        "confusion_matrix": {
+          "tn": 228,
+          "fp": 382,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5872,
+          0.6637
+        ],
+        "max_benign_score": 0.9975
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 8,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.4599,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.5401,
+          "confusion_matrix": {
+            "tn": 132,
+            "fp": 155,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4823,
+            0.5968
+          ],
+          "max_benign_score": 0.9691
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.3448,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6552,
+          "confusion_matrix": {
+            "tn": 10,
+            "fp": 19,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4734,
+            0.8006
+          ],
+          "max_benign_score": 0.9975
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.0182
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.3028,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6972,
+          "confusion_matrix": {
+            "tn": 96,
+            "fp": 221,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.6445,
+            0.7451
+          ],
+          "max_benign_score": 0.9964
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_search_reports": 32,
+        "benign:fs_search_reports:all_servers": 32,
+        "benign:fs_write_todo": 18,
+        "benign:fs_write_todo:all_servers": 18,
+        "benign:fs_report_digest": 16,
+        "benign:fs_report_digest:all_servers": 16,
+        "benign:fs_json_summary": 11,
+        "benign:db_low_stock": 11,
+        "benign:db_low_stock:all_servers": 11,
+        "benign:web_docs_tour:all_servers": 11,
+        "benign:calc_unit_report:all_servers": 11,
+        "benign:fs_json_summary:all_servers": 10,
+        "benign:fs_copy_notes": 8,
+        "benign:fs_copy_notes:all_servers": 8,
+        "benign:db_country_counts": 8,
+        "benign:db_country_counts:all_servers": 8,
+        "benign:db_recent_orders": 8,
+        "benign:db_recent_orders:all_servers": 8,
+        "benign:db_error_logs": 7,
+        "benign:db_error_logs:all_servers": 7,
+        "benign:multi_db_to_csv:all_servers": 7,
+        "benign:fs_find_data_files:all_servers": 6,
+        "benign:db_top_products:all_servers": 6,
+        "benign:db_user_lookup:all_servers": 6,
+        "benign:web_faq_long": 6,
+        "benign:web_faq_long:all_servers": 6,
+        "benign:web_products_list:all_servers": 6,
+        "benign:multi_db_to_csv": 6,
+        "benign:fs_find_data_files": 5,
+        "benign:db_top_products": 5,
+        "benign:db_user_lookup": 5,
+        "benign:web_about_team:all_servers": 4,
+        "benign:web_products_list": 4,
+        "benign:fs_summarize_notes:all_servers": 3,
+        "benign:fs_explore_documents:all_servers": 3,
+        "benign:db_order_status:all_servers": 3,
+        "benign:db_add_log:all_servers": 3,
+        "benign:db_new_order": 3,
+        "benign:calc_temperature:all_servers": 3,
+        "benign:multi_news_growth:all_servers": 3,
+        "benign:multi_notes_to_log": 3,
+        "benign:fs_summarize_notes": 2,
+        "benign:fs_explore_documents": 2,
+        "benign:db_order_status": 2,
+        "benign:db_add_log": 2,
+        "benign:db_new_order:all_servers": 2,
+        "benign:web_getting_started:all_servers": 2,
+        "benign:web_api_docs:all_servers": 2,
+        "benign:multi_news_to_file": 2,
+        "benign:multi_db_report:all_servers": 2,
+        "benign:calc_add:all_servers": 2,
+        "benign:multi_order_share:all_servers": 2,
+        "benign:multi_web_db_prices": 2,
+        "benign:multi_web_db_prices:all_servers": 2,
+        "benign:multi_news_growth": 2,
+        "benign:multi_notes_to_log:all_servers": 2,
+        "benign:web_news:all_servers": 1,
+        "benign:multi_db_report": 1,
+        "benign:multi_news_to_file:all_servers": 1,
+        "benign:multi_price_check:all_servers": 1,
+        "benign:multi_order_share": 1,
+        "benign:multi_region_share": 1,
+        "benign:fs_shadowing_probe": 1,
+        "benign:multi_region_share:all_servers": 1,
+        "benign:fs_shadowing_probe:all_servers": 1,
+        "benign:fs_sampling_probe:all_servers": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261009/rf_xgb",
+      "model_path": "models/phase9_expanded_20261009/rf_xgb.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.3849,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.6151,
+        "confusion_matrix": {
+          "tn": 244,
+          "fp": 390,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5767,
+          0.6522
+        ],
+        "max_benign_score": 0.9796
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 0.4583,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5417,
+        "confusion_matrix": {
+          "tn": 11,
+          "fp": 13,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3507,
+          0.7211
+        ],
+        "max_benign_score": 0.9796
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.382,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.618,
+        "confusion_matrix": {
+          "tn": 233,
+          "fp": 377,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5789,
+          0.6557
+        ],
+        "max_benign_score": 0.9779
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 8,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.4599,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.5401,
+          "confusion_matrix": {
+            "tn": 132,
+            "fp": 155,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4823,
+            0.5968
+          ],
+          "max_benign_score": 0.8746
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.3448,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6552,
+          "confusion_matrix": {
+            "tn": 10,
+            "fp": 19,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4734,
+            0.8006
+          ],
+          "max_benign_score": 0.9549
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.0708
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.3186,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6814,
+          "confusion_matrix": {
+            "tn": 101,
+            "fp": 216,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.6282,
+            0.7302
+          ],
+          "max_benign_score": 0.9796
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_search_reports": 32,
+        "benign:fs_search_reports:all_servers": 32,
+        "benign:fs_write_todo": 18,
+        "benign:fs_write_todo:all_servers": 18,
+        "benign:fs_report_digest": 16,
+        "benign:fs_report_digest:all_servers": 16,
+        "benign:fs_json_summary": 11,
+        "benign:db_low_stock": 11,
+        "benign:db_low_stock:all_servers": 11,
+        "benign:web_docs_tour:all_servers": 11,
+        "benign:calc_unit_report:all_servers": 11,
+        "benign:fs_json_summary:all_servers": 10,
+        "benign:fs_copy_notes": 8,
+        "benign:fs_copy_notes:all_servers": 8,
+        "benign:db_country_counts": 8,
+        "benign:db_country_counts:all_servers": 8,
+        "benign:db_recent_orders": 8,
+        "benign:db_recent_orders:all_servers": 8,
+        "benign:db_error_logs": 7,
+        "benign:fs_find_data_files:all_servers": 6,
+        "benign:db_top_products:all_servers": 6,
+        "benign:db_user_lookup:all_servers": 6,
+        "benign:web_faq_long": 6,
+        "benign:db_error_logs:all_servers": 6,
+        "benign:multi_db_to_csv": 6,
+        "benign:multi_db_to_csv:all_servers": 6,
+        "benign:fs_find_data_files": 5,
+        "benign:db_top_products": 5,
+        "benign:db_user_lookup": 5,
+        "benign:web_products_list:all_servers": 5,
+        "benign:web_faq_long:all_servers": 4,
+        "benign:web_about_team:all_servers": 4,
+        "benign:web_products_list": 4,
+        "benign:fs_summarize_notes:all_servers": 3,
+        "benign:fs_explore_documents:all_servers": 3,
+        "benign:db_order_status:all_servers": 3,
+        "benign:db_add_log:all_servers": 3,
+        "benign:db_new_order": 3,
+        "benign:calc_temperature:all_servers": 3,
+        "benign:multi_news_growth:all_servers": 3,
+        "benign:multi_notes_to_log": 3,
+        "benign:fs_summarize_notes": 2,
+        "benign:fs_explore_documents": 2,
+        "benign:db_order_status": 2,
+        "benign:db_add_log": 2,
+        "benign:db_new_order:all_servers": 2,
+        "benign:web_getting_started:all_servers": 2,
+        "benign:web_api_docs:all_servers": 2,
+        "benign:multi_news_to_file": 2,
+        "benign:multi_db_report:all_servers": 2,
+        "benign:calc_add:all_servers": 2,
+        "benign:multi_order_share:all_servers": 2,
+        "benign:multi_web_db_prices": 2,
+        "benign:multi_web_db_prices:all_servers": 2,
+        "benign:multi_news_growth": 2,
+        "benign:multi_notes_to_log:all_servers": 2,
+        "benign:web_news:all_servers": 1,
+        "benign:multi_db_report": 1,
+        "benign:multi_news_to_file:all_servers": 1,
+        "benign:multi_price_check:all_servers": 1,
+        "benign:multi_order_share": 1,
+        "benign:multi_region_share": 1,
+        "benign:fs_shadowing_probe": 1,
+        "benign:multi_region_share:all_servers": 1,
+        "benign:fs_shadowing_probe:all_servers": 1,
+        "benign:fs_sampling_probe:all_servers": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261009/decision_tree",
+      "model_path": "models/phase9_expanded_20261009/decision_tree.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.6467,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.3533,
+        "confusion_matrix": {
+          "tn": 410,
+          "fp": 224,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3171,
+          0.3913
+        ],
+        "max_benign_score": 1.0
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5,
+        "confusion_matrix": {
+          "tn": 12,
+          "fp": 12,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3143,
+          0.6857
+        ],
+        "max_benign_score": 1.0
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.6525,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.3475,
+        "confusion_matrix": {
+          "tn": 398,
+          "fp": 212,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3108,
+          0.3862
+        ],
+        "max_benign_score": 1.0
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 8,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 287,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0132
+          ],
+          "max_benign_score": 0.0
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.7241,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.2759,
+          "confusion_matrix": {
+            "tn": 21,
+            "fp": 8,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.147,
+            0.4572
+          ],
+          "max_benign_score": 1.0
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.0
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.3186,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6814,
+          "confusion_matrix": {
+            "tn": 101,
+            "fp": 216,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.6282,
+            0.7302
+          ],
+          "max_benign_score": 1.0
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_search_reports:all_servers": 32,
+        "benign:fs_write_todo:all_servers": 18,
+        "benign:fs_report_digest:all_servers": 16,
+        "benign:db_low_stock:all_servers": 11,
+        "benign:web_docs_tour:all_servers": 11,
+        "benign:calc_unit_report:all_servers": 11,
+        "benign:fs_json_summary:all_servers": 10,
+        "benign:fs_copy_notes:all_servers": 8,
+        "benign:db_country_counts:all_servers": 8,
+        "benign:db_recent_orders:all_servers": 8,
+        "benign:fs_find_data_files:all_servers": 6,
+        "benign:db_top_products:all_servers": 6,
+        "benign:db_user_lookup:all_servers": 6,
+        "benign:db_error_logs:all_servers": 6,
+        "benign:multi_db_to_csv:all_servers": 6,
+        "benign:web_products_list:all_servers": 5,
+        "benign:web_faq_long:all_servers": 4,
+        "benign:web_about_team:all_servers": 4,
+        "benign:fs_summarize_notes:all_servers": 3,
+        "benign:fs_explore_documents:all_servers": 3,
+        "benign:db_order_status:all_servers": 3,
+        "benign:db_add_log:all_servers": 3,
+        "benign:calc_temperature:all_servers": 3,
+        "benign:multi_news_growth:all_servers": 3,
+        "benign:db_new_order:all_servers": 2,
+        "benign:web_getting_started:all_servers": 2,
+        "benign:web_api_docs:all_servers": 2,
+        "benign:multi_db_report:all_servers": 2,
+        "benign:calc_add:all_servers": 2,
+        "benign:multi_order_share:all_servers": 2,
+        "benign:multi_web_db_prices:all_servers": 2,
+        "benign:multi_db_to_csv": 2,
+        "benign:multi_news_growth": 2,
+        "benign:multi_notes_to_log:all_servers": 2,
+        "benign:web_news:all_servers": 1,
+        "benign:multi_news_to_file:all_servers": 1,
+        "benign:multi_price_check:all_servers": 1,
+        "benign:multi_order_share": 1,
+        "benign:multi_region_share": 1,
+        "benign:multi_region_share:all_servers": 1,
+        "benign:fs_shadowing_probe:all_servers": 1,
+        "benign:fs_sampling_probe:all_servers": 1,
+        "benign:multi_web_db_prices": 1,
+        "benign:multi_notes_to_log": 1
+      }
+    },
+    {
+      "model": "phase9_expanded_20261009/cnn",
+      "model_path": "models/phase9_expanded_20261009/cnn.joblib",
+      "trained_on_sha256": "c92b8258343313c834e14d921e57f6f68a20077e44bfae3dbc3ee54d3cca8767",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 0.4464,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5536,
+        "confusion_matrix": {
+          "tn": 283,
+          "fp": 351,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5147,
+          0.5919
+        ],
+        "max_benign_score": 1.0
+      },
+      "task_seen_in_training": {
+        "n": 24,
+        "n_benign": 24,
+        "n_attack": 0,
+        "accuracy": 0.4583,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5417,
+        "confusion_matrix": {
+          "tn": 11,
+          "fp": 13,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.3507,
+          0.7211
+        ],
+        "max_benign_score": 1.0
+      },
+      "task_not_seen_in_training": {
+        "n": 610,
+        "n_benign": 610,
+        "n_attack": 0,
+        "accuracy": 0.4459,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.5541,
+        "confusion_matrix": {
+          "tn": 272,
+          "fp": 338,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.5144,
+          0.5931
+        ],
+        "max_benign_score": 1.0
+      },
+      "n_training_tasks": 6,
+      "external_rows_identical_to_a_training_row": 8,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 0.5157,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.4843,
+          "confusion_matrix": {
+            "tn": 148,
+            "fp": 139,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.4271,
+            0.542
+          ],
+          "max_benign_score": 1.0
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 0.5517,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.4483,
+          "confusion_matrix": {
+            "tn": 16,
+            "fp": 13,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.2841,
+            0.6245
+          ],
+          "max_benign_score": 1.0
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.0
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 0.3722,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.6278,
+          "confusion_matrix": {
+            "tn": 118,
+            "fp": 199,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.5733,
+            0.6791
+          ],
+          "max_benign_score": 1.0
+        }
+      },
+      "flagged_benign_scenarios": {
+        "benign:fs_search_reports": 46,
+        "benign:fs_search_reports:all_servers": 32,
+        "benign:fs_write_todo:all_servers": 18,
+        "benign:fs_report_digest:all_servers": 16,
+        "benign:fs_report_digest": 14,
+        "benign:fs_write_todo": 12,
+        "benign:db_low_stock:all_servers": 11,
+        "benign:web_docs_tour:all_servers": 11,
+        "benign:calc_unit_report:all_servers": 11,
+        "benign:fs_json_summary:all_servers": 10,
+        "benign:fs_copy_notes:all_servers": 8,
+        "benign:fs_json_summary": 8,
+        "benign:db_country_counts:all_servers": 8,
+        "benign:db_low_stock": 7,
+        "benign:db_country_counts": 7,
+        "benign:web_docs_tour": 7,
+        "benign:fs_find_data_files": 6,
+        "benign:fs_find_data_files:all_servers": 6,
+        "benign:db_top_products:all_servers": 6,
+        "benign:db_user_lookup:all_servers": 6,
+        "benign:fs_copy_notes": 6,
+        "benign:calc_unit_report": 6,
+        "benign:fs_explore_documents": 4,
+        "benign:db_error_logs:all_servers": 4,
+        "benign:db_recent_orders:all_servers": 4,
+        "benign:web_about_team:all_servers": 4,
+        "benign:fs_summarize_notes:all_servers": 3,
+        "benign:fs_explore_documents:all_servers": 3,
+        "benign:db_top_products": 3,
+        "benign:db_add_log:all_servers": 3,
+        "benign:calc_temperature:all_servers": 3,
+        "benign:db_error_logs": 3,
+        "benign:multi_db_to_csv:all_servers": 3,
+        "benign:multi_news_growth:all_servers": 3,
+        "benign:multi_notes_to_log": 3,
+        "benign:db_order_status:all_servers": 2,
+        "benign:db_user_lookup": 2,
+        "benign:db_new_order:all_servers": 2,
+        "benign:web_getting_started:all_servers": 2,
+        "benign:web_api_docs": 2,
+        "benign:web_api_docs:all_servers": 2,
+        "benign:multi_db_report:all_servers": 2,
+        "benign:calc_add:all_servers": 2,
+        "benign:multi_order_share:all_servers": 2,
+        "benign:web_about_team": 2,
+        "benign:web_products_list:all_servers": 2,
+        "benign:multi_web_db_prices": 2,
+        "benign:multi_web_db_prices:all_servers": 2,
+        "benign:multi_db_to_csv": 2,
+        "benign:multi_notes_to_log:all_servers": 2,
+        "benign:fs_summarize_notes": 1,
+        "benign:db_order_status": 1,
+        "benign:db_new_order": 1,
+        "benign:web_getting_started": 1,
+        "benign:web_news:all_servers": 1,
+        "benign:multi_news_to_file": 1,
+        "benign:multi_db_report": 1,
+        "benign:multi_news_to_file:all_servers": 1,
+        "benign:multi_price_check:all_servers": 1,
+        "benign:multi_order_share": 1,
+        "benign:multi_region_share": 1,
+        "benign:fs_shadowing_probe": 1,
+        "benign:multi_region_share:all_servers": 1,
+        "benign:fs_shadowing_probe:all_servers": 1,
+        "benign:fs_sampling_probe:all_servers": 1,
+        "benign:multi_news_growth": 1
+      }
+    }
+  ]
+}

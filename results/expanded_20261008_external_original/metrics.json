@@ -1,0 +1,575 @@
+{
+  "created_at": "2026-10-07T20:32:46+00:00",
+  "features_dir": "/lab/data/expanded_20261006_holdout_original_ml",
+  "dataset_sha256": "12a010f1cdfbe55bae4ebd94dc425ad0f9543759ed7cd59ab432950d0d4dcf6a",
+  "n_sessions": 634,
+  "n_benign": 634,
+  "n_attack": 0,
+  "n_distinct_vectors": 601,
+  "models": [
+    {
+      "model": "expanded_20261008/random_forest",
+      "model_path": "/lab/models/expanded_20261008/random_forest.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": 0.19
+      },
+      "task_seen_in_training": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": 0.19
+      },
+      "task_not_seen_in_training": {
+        "n": 0
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 43,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 287,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0132
+          ],
+          "max_benign_score": 0.01
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 29,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.117
+          ],
+          "max_benign_score": 0.19
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.19
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 317,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.012
+          ],
+          "max_benign_score": 0.04
+        }
+      },
+      "flagged_benign_scenarios": {}
+    },
+    {
+      "model": "expanded_20261008/svm",
+      "model_path": "/lab/models/expanded_20261008/svm.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "score_kind": "SVM margin (>0 means attack)",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": -0.6795
+      },
+      "task_seen_in_training": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": -0.6795
+      },
+      "task_not_seen_in_training": {
+        "n": 0
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 43,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 287,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0132
+          ],
+          "max_benign_score": -0.6994
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 29,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.117
+          ],
+          "max_benign_score": -0.6795
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": -0.7888
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 317,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.012
+          ],
+          "max_benign_score": -0.7376
+        }
+      },
+      "flagged_benign_scenarios": {}
+    },
+    {
+      "model": "expanded_20261008/xgboost",
+      "model_path": "/lab/models/expanded_20261008/xgboost.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": 0.2505
+      },
+      "task_seen_in_training": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": 0.2505
+      },
+      "task_not_seen_in_training": {
+        "n": 0
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 43,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 287,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0132
+          ],
+          "max_benign_score": 0.0018
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 29,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.117
+          ],
+          "max_benign_score": 0.1369
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.2505
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 317,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.012
+          ],
+          "max_benign_score": 0.0033
+        }
+      },
+      "flagged_benign_scenarios": {}
+    },
+    {
+      "model": "expanded_20261008/rf_xgb",
+      "model_path": "/lab/models/expanded_20261008/rf_xgb.joblib",
+      "trained_on_sha256": "9ebcbb7d31a2445c6cccba0bbec3385749ded28d8998c103bb439b1f898ad1f2",
+      "n_features": 65,
+      "score_kind": "probability of attack",
+      "all": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": 0.2202
+      },
+      "task_seen_in_training": {
+        "n": 634,
+        "n_benign": 634,
+        "n_attack": 0,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "confusion_matrix": {
+          "tn": 634,
+          "fp": 0,
+          "fn": 0,
+          "tp": 0
+        },
+        "fpr_wilson95": [
+          0.0,
+          0.006
+        ],
+        "max_benign_score": 0.2202
+      },
+      "task_not_seen_in_training": {
+        "n": 0
+      },
+      "n_training_tasks": 38,
+      "external_rows_identical_to_a_training_row": 43,
+      "by_n_servers": {
+        "1": {
+          "n": 287,
+          "n_benign": 287,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 287,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.0132
+          ],
+          "max_benign_score": 0.0056
+        },
+        "2": {
+          "n": 29,
+          "n_benign": 29,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 29,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.117
+          ],
+          "max_benign_score": 0.1613
+        },
+        "3": {
+          "n": 1,
+          "n_benign": 1,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.7935
+          ],
+          "max_benign_score": 0.2202
+        },
+        "6": {
+          "n": 317,
+          "n_benign": 317,
+          "n_attack": 0,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "confusion_matrix": {
+            "tn": 317,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          },
+          "fpr_wilson95": [
+            0.0,
+            0.012
+          ],
+          "max_benign_score": 0.0204
+        }
+      },
+      "flagged_benign_scenarios": {}
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "dataset_path": "C:\\Projects\\IDS\\data\\try6",
+  "dataset_sha256": "0784a0f970421d70878938ac3cb6a4d62e1698ac63be75c761100114ccac7337",
+  "generated_at": "2026-10-03T20:40:14+00:00",
+  "n_sessions": 65,
+  "n_benign": 40,
+  "n_attack": 25,
+  "attack_families": {
+    "poisoned_tool": 25
+  },
+  "attack_variants": {
+    "param": 5,
+    "overt": 5,
+    "tagged": 5,
+    "polite": 5,
+    "padded": 5
+  },
+  "attack_succeeded": 11,
+  "n_features": 62,
+  "features_per_category": {
+    "structural": 25,
+    "behavioral": 18,
+    "content": 19
+  },
+  "n_wire_events": 1275,
+  "extractor_version": "1.0",
+  "lab_versions": {
+    "0.6.0": 65
+  },
+  "python": "3.12.6"
+}
